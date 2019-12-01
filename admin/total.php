@@ -1,3 +1,7 @@
+<?php
+include_once "../base.php";
+?>
+
 <div class="frame">
   <p class="t cent botli">進站總人數管理</p>
   <form method="post" action="./api/total.php">

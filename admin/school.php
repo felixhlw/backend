@@ -1,16 +1,17 @@
 <?php
+include_once "../base.php";
 //建立一個資料表專用的變數，後續需要使用到資料表名稱的地方都使用這個變數即可
 //可以減少手打的錯誤，並且方便其他功能的延用
- $useTable="news";
+ $useTable="school";
 
 ?>
 <div class="frame">
-  <p class="t cent botli">最新消息資料管理</p>
+  <p class="t cent botli">學歷資料管理</p>
   <form method="post" action="./api/edit.php">
     <table width="100%">
       <tbody>
         <tr class="yel">
-          <td width="80%">最新消息資料內容</td>
+          <td width="80%">學歷資料內容</td>
           <td width="10%">顯示</td>
           <td width="10%">刪除</td>
         </tr>
@@ -53,7 +54,7 @@
           <td width="200px">
             <input type="button"      
                    onclick="op('#cover','#cvr','./view/<?=$useTable;?>.php?table=<?=$useTable;?>')" 
-                   value="新增最新消息資料">
+                   value="新增學歷資料">
           </td>
           <td class="cent"><input type="submit" value="修改確定"><input type="reset" value="重置"></td>
         </tr>

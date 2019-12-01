@@ -1,5 +1,5 @@
 <?php
-include_once "base.php";
+include_once "./base.php";
 
 ?>
 
@@ -20,6 +20,8 @@ include_once "base.php";
   <!--載入jQuery-->
   <script src="./js/jquery-3.4.1.min.js"></script>
   <script src="./js/js.js"></script>
+  <script src="./tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>tinymce.init({selector:'textarea'});</script>
   <noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
@@ -52,16 +54,16 @@ include_once "base.php";
 
         <div class="menu">
           <div>
-          <a href="?do=title"  id="title">選單標題區管理</a>
-          <a href="?do=info" id="info">個人資料管理</a>
-          <a href="?do=skill" id="skill">技能管理</a>
-          <a href="?do=history" id="history">經歷管理</a>
-          <a href="?do=school" id="school">學歷管理</a>
-          <a href="?do=gallery" id="gallery">作品資料管理</a>
-          <a href="?do=doc" id="doc">自傳管理</a>
-          <a href="?do=admin" id="admin">管理者帳號管理</a>
-          <a href="?do=total" id="total">進站總人數管理</a>
-          <a href="?do=bottom" id="bottom">頁尾版權資料管理</a>
+          <a href="#"  onclick="loadpage('title.php')" id="title">選單標題區管理</a>
+          <a href="#" onclick="loadpage('info.php')" id="info">個人資料管理</a>
+          <a href="#" onclick="loadpage('skill.php')" id="skill">技能管理</a>
+          <a href="#" onclick="loadpage('history.php')" id="history">經歷管理</a>
+          <a href="#" onclick="loadpage('school.php')" id="school">學歷管理</a>
+          <a href="#" onclick="loadpage('gallery.php')" id="gallery">作品資料管理</a>
+          <a href="#" onclick="loadpage('doc.php')" id="doc">自傳管理</a>
+          <a href="#" onclick="loadpage('admin.php')" id="admin">管理者帳號管理</a>
+          <a href="#" onclick="loadpage('total.php')" id="total">進站總人數管理</a>
+          <a href="#" onclick="loadpage('bottom.php')" id="bottom">頁尾版權資料管理</a>
           </div>
           <div class="dbor" >
             <span class="t">進站總人數 :<?=$_SESSION['total'];?></span>
@@ -73,15 +75,15 @@ include_once "base.php";
               $do=(!empty($_GET['do']))?$_GET['do']:"title";
 
               //我們將所有要include進來的後台功能檔案都放在 ./admin 目錄下，因此根據GET的值來組合include檔的完整路徑
-              $path="./admin/" . $do . ".php";
+ /*              $path="./admin/" . $do . ".php";
 
               //判斷檔案是否存在來決定是要匯入檔案還是預設匯入title.php
               if(file_exists($path)){
                 include $path;
               }else{
                 include "./admin/title.php";
-              }
-              echo $do
+              }*/
+              echo $do 
         ?>          
         </div>
       </div>
@@ -95,20 +97,23 @@ include_once "base.php";
 
 </html>
 <script>
+  var show ="<?php echo $do ?>";
+
   //建立一個函式loadpage(page)用來載入內容至content區塊中
-/*   loadpage('title.php');
+   
+ loadpage(show+'.php');
 
-  function loadpage(page) { */
+  function loadpage(page) { 
+   /*  global $pdo; */
 
-
-    /*  $.get("./results/"+page,function(res){
+  /*  $.get("./results/"+page,function(res){
         console.log(res)
       $(".content").html(res)  
       }
       ) */
-/*     $(".content").load("./admin/" + page) //最簡潔的模式，就這一行~
+   $(".content").load("./admin/" + page) //最簡潔的模式，就這一行~
+  }
 
-  } */
 
 $(function(){
 
@@ -116,20 +121,37 @@ $(function(){
 /* alert(show); */
   
   $(show).removeClass("menu a").addClass("menushow");
+  $(show).siblings().removeClass("menushow");
  /*  $(show).siblings().removeClass("menushow").addClass("menu a"); */
 /*     let idx = $("menu a").get(do).index();
     $(".menu a").eq(idx).removeClass("menu a").addClass("menushow");
-    $(".menu a").eq(idx).siblings().removeClass("menushow").addClass("menu a");
-     */
+    $(".menu a").eq(idx).siblings().removeClass("menushow").addClass("menu a"); */
+     
 
   
-/*   $(".menu a").on("click", function () {
+   $(".menu a").on("click", function () {
     let idx = $(this).index();
     $(".menu a").eq(idx).removeClass("menu a").addClass("menushow");
     $(".menu a").eq(idx).siblings().removeClass("menushow").addClass("menu a");
     
-  }) */
+  }) 
   
 })
+
+
+tinyMCE.init({
+  		// 初始化參數設定[註1]
+  		selector: "textarea", // 目標物件
+  		auto_focus: "editor1", // 聚焦物件
+      branding: false,
+  		language: "zh_TW", // 語系(CDN沒有中文，需要下載原始source才有)
+  		theme: "modern", // 模板風格
+  		plugins : "advlist autolink link image lists charmap print preview", // 套件設定: 進階清單、自動連結、連結、上傳圖片、清單、特殊字元表、列印、預覽
+  		mobile: { // 行動裝置設定
+  		  	theme: "mobile", // 模板風格
+  			plugins: [ "autosave", "lists", "autolink" ],  // 套件設定: 自動儲存、清單、自動連結
+  			toolbar: [ "undo", "bold", "italic", "styleselect","table","link image media","mybutton" ]  // 工具列設定: 復原、粗體、斜體、樣式表
+  		} 
+  	});
 
 </script>
