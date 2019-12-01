@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Microsoft Jhenghei";
+}
+body{
+  background: #42413c;
+  z-index: -1;
+}
+#main{
+  width:1280px;
+  height:800px;
+  margin:auto;
+  background: #ffffff;
+}
+.head{
+  width: 70px;
+  height: 70px;
+  margin: 10px 10px 10px 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.br{
+  border: 1px solid #999;
+}
+
+.top{
+  width:100%;
+  height:90px;
+  background: #a9a9a9;
+  z-index: 8088;
+}
+
+
+
+.container{
+  width: 1280px;
+  display: block;
+  position: relative;
+}
+
+
+.flex {
+  display: flex;
+  height: 700px;
+  margin: 0px;
+  padding: 25px;
+  background-color: #eaeaea;
+  /* 修改以下值試試看 row | row-reverse | column | column-reverse; */
+  flex-direction: row;
+  box-shadow:inset 0px 15px 10px -15px #000; 
+ 
+}
+
+.menu{
+  flex: 1;
+  font-size:14px;
+  margin-right: 10px;
+  background-color: #a9a9a9;
+  border-radius: 15px;
+  /*   font-size: 2rem; */
+}
+.menu a{
+  display: block;
+  margin: 20px 20px;
+  padding: 5px 10px;
+  font-size: 20px;
+  color: #42413c;
+  text-decoration: none;
+  font-weight: bold;
+  background: rgb(202, 202, 202);
+  border-radius: 15px;
+  box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2); 
+  text-align: left !important;  
+  
+ }
+
+.menu a:hover{
+  background: rgb(226, 226, 226);
+  color:#F00;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 2px rgb(255, 255, 255); 
+}
+.menu a:link{
+  color: gray;
+}
+.menu a:active{
+  color: gray;
+}
+
+.menushow{
+  display: block;
+  margin: 20px 0;
+  padding: 5px 10px;
+  font-size: 20px;
+  color: white !important;
+  text-decoration: none;
+  background: rgb(255, 0, 0) !important;
+  box-shadow: 0px 0px 5px 2px rgb(255, 255, 255) !important; 
+}
+.menushow:hover{
+  color:#FFF !important;
+}
+
+.content{
+padding:20px;
+font-size:14px;
+overflow:auto;
+flex-grow: 3;
+flex-shrink: 1;
+flex-basis: 0%;
+background-color: #dbdbdb;
+border-radius: 15px;
+
+
+}
+.footer{
+  width:100%;
+  height:45px;
+  text-align: center;
+  color:white;
+  font-size: 14px;
+  background: #a9a9a9;
+  padding-top:8px;
+  line-height: 30px;
+}
+.frame{
+  width:99%; 
+  height:96%; 
+  margin:auto; 
+  overflow:auto; 
+  border:#666 1px solid;"
+}
+.exit{
+  margin: 0 auto;
+  padding-top:32px;
+  padding-right:35px; 
+  display: block;
+/*   display: inline-block; */
+  float: right;
+  width: 150px;
+  height: 90px;
+  text-align: right;
+  color: rgb(234, 234, 234);
+  text-shadow: 2px 2px 5px #333;
+  cursor: pointer;
+  transition: all 0.1s;
+
+}
+.exit:hover{
+  transform: scale(1.1);
+}
+input[type=checkbox],input[type=radio] {
+  outline: none;
+  filter: drop-shadow(0px 3px 1px rgb(178, 178, 178));
+  zoom: 1.2;
+  cursor: pointer;
+}
+/* .hasborder-c { 
+  clear: both;
+  border:2px solid rgb(48, 48, 48);;
+  border-radius:50%;
+}
+.hasborder-s { border:2px solid rgb(56, 56, 56); } */
