@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="./tinymce/tinymce.min.js" referrerpolicy="origin"></script>
-  <script>tinymce.init({selector:'textarea'});</script>
+    <script src="./tinymce/js/tinymce/tinymce.js"></script>
+  <script>
+  tinymce.init({
+    selector:'textarea',
+    branding: false,
+    language: "zh_TW",
+    plugins : "advlist autolink link image lists charmap print preview"
+    });
+  </script>
 </head>
 <body>
     
@@ -20,7 +27,7 @@
         <td>&nbsp; </td>
     </tr>
     <tr>
-        <td><textarea name="text" id="editor1" style="width:640px;height:300px"></textarea></td>
+        <td><textarea name="text" id="editor1" style="width:640px;height:500px"></textarea></td>
 
     </tr>
     <tr class="cent">

@@ -20,8 +20,15 @@ include_once "./base.php";
   <!--載入jQuery-->
   <script src="./js/jquery-3.4.1.min.js"></script>
   <script src="./js/js.js"></script>
-  <script src="./tinymce/tinymce.min.js" referrerpolicy="origin"></script>
-  <script>tinymce.init({selector:'textarea'});</script>
+  <script src="./tinymce/js/tinymce/tinymce.js"></script>
+  <script>
+  tinymce.init({
+    selector:'textarea',
+    branding: false,
+    language: "zh_TW",
+    plugins : "advlist autolink link image lists charmap print preview"
+    });
+  </script>
   <noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
@@ -30,7 +37,9 @@ include_once "./base.php";
 <div id="cover" style="display:none; ">
     <div id="coverr">
       <a style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;"
-        onclick="cl(&#39;#cover&#39;)">X</a>
+        onclick="cl(&#39;#cover&#39;)">
+        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M17.953 7.453L13.422 12l4.531 4.547-1.406 1.406L12 13.422l-4.547 4.531-1.406-1.406L10.578 12 6.047 7.453l1.406-1.406L12 10.578l4.547-4.531z" fill-rule="evenodd"></path></svg>
+      </a>
       <div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:9898;"></div>
     </div>
   </div>
@@ -139,19 +148,6 @@ $(function(){
 })
 
 
-tinyMCE.init({
-  		// 初始化參數設定[註1]
-  		selector: "textarea", // 目標物件
-  		auto_focus: "editor1", // 聚焦物件
-      branding: false,
-  		language: "zh_TW", // 語系(CDN沒有中文，需要下載原始source才有)
-  		theme: "modern", // 模板風格
-  		plugins : "advlist autolink link image lists charmap print preview", // 套件設定: 進階清單、自動連結、連結、上傳圖片、清單、特殊字元表、列印、預覽
-  		mobile: { // 行動裝置設定
-  		  	theme: "mobile", // 模板風格
-  			plugins: [ "autosave", "lists", "autolink" ],  // 套件設定: 自動儲存、清單、自動連結
-  			toolbar: [ "undo", "bold", "italic", "styleselect","table","link image media","mybutton" ]  // 工具列設定: 復原、粗體、斜體、樣式表
-  		} 
-  	});
+
 
 </script>
