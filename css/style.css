@@ -47,7 +47,8 @@ body{
 
 .flex {
   display: flex;
-  height: 700px;
+  align-items: stretch;
+  height: 750px;
   margin: 0px;
   padding: 25px;
   background-color: #eaeaea;
