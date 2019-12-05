@@ -18,6 +18,12 @@ switch($table){
         $data["text"]=$_POST['text'];
     }
   break;
+  case "gallery":
+    if(!empty($_POST['title']) && !empty($_POST['text'])){
+        $data["title"]=$_POST['title'];
+        $data["text"]=$_POST['text'];
+    }
+  break;
   case "admin":
     if(!empty($_POST['acc']) && !empty($_POST['pw'])){
         $data["acc"]=$_POST['acc'];

@@ -20,7 +20,7 @@ include_once "./base.php";
   <!--載入jQuery-->
   <script src="./js/jquery-3.4.1.min.js"></script>
   <script src="./js/js.js"></script>
-  <script src="./tinymce/js/tinymce/tinymce.js"></script>
+  <script src="./tinymce/js/tinymce/tinymce.min.js"></script>
   <script>
   tinymce.init({
     selector:'textarea',
@@ -65,6 +65,7 @@ include_once "./base.php";
           <div>
           <a href="#"  onclick="loadpage('title.php')" id="title">選單標題區管理</a>
           <a href="#" onclick="loadpage('info.php')" id="info">個人資料管理</a>
+          <a href="#" onclick="loadpage('cond.php')" id="cond">求職條件管理</a>
           <a href="#" onclick="loadpage('skill.php')" id="skill">技能管理</a>
           <a href="#" onclick="loadpage('history.php')" id="history">經歷管理</a>
           <a href="#" onclick="loadpage('school.php')" id="school">學歷管理</a>
@@ -92,7 +93,11 @@ include_once "./base.php";
               }else{
                 include "./admin/title.php";
               }*/
-              echo $do 
+              
+
+               /*  console.log($do); */             
+                
+              
         ?>          
         </div>
       </div>

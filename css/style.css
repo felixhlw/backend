@@ -136,6 +136,7 @@ border-radius: 15px;
   margin:auto; 
   overflow:auto; 
   border:#666 1px solid;"
+  border-radius: 10px;
 }
 .exit{
   margin: 0 auto;

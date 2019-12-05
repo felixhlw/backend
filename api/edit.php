@@ -21,6 +21,12 @@ foreach($_POST['id'] as $key => $id){
                 $data['text']=$_POST['text'][$key];
                 $data['sh']=($id==$_POST['sh'])?1:0;
             break;
+            case "gallery":
+                //將欄位內容更新成表單傳遞過來的內容
+                $data['title']=$_POST['title'][$key];
+                $data['text']=$_POST['text'][$key];
+                $data['sh']=($id==$_POST['sh'])?1:0;
+            break;
             case "admin":
                 $data['acc']=$_POST['acc'][$key];
                 $data['pw']=$_POST['pw'][$key];                
