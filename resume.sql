@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2019 年 12 月 05 日 06:51
+-- 產生時間： 2019-12-05 15:40:24
 -- 伺服器版本： 10.4.6-MariaDB
--- PHP 版本： 7.1.32
+-- PHP 版本： 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -75,6 +75,28 @@ INSERT INTO `bottom` (`id`, `bottom`) VALUES
 -- --------------------------------------------------------
 
 --
+-- 資料表結構 `cond`
+--
+
+CREATE TABLE `cond` (
+  `id` int(5) UNSIGNED NOT NULL,
+  `file` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `text` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sh` int(1) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `cond`
+--
+
+INSERT INTO `cond` (`id`, `file`, `text`, `sh`) VALUES
+(1, '', '123123123123123', 1),
+(2, '', 'wewewerwer', 1),
+(3, '', 'ghfghfghfghfgh', 1);
+
+-- --------------------------------------------------------
+
+--
 -- 資料表結構 `doc`
 --
 
@@ -91,6 +113,28 @@ CREATE TABLE `doc` (
 
 INSERT INTO `doc` (`id`, `file`, `text`, `sh`) VALUES
 (5, '', '<p>ABCDEFG <span style=\"font-size: 24pt; color: #2dc26b;\"><strong>中文輸入</strong></span>玩一玩&nbsp; $ &hearts; &copy;&nbsp;<img src=\"img/head.jpg\" alt=\"\" width=\"118\" height=\"125\" /></p>\r\n<p>dfskhdfjkhdkjlhhhhhhhhhhhh&nbsp; &nbsp; &nbsp; &nbsp; <img src=\"https://aimatchmaker.com/src/img/logo/logo_ebc.jpg\" alt=\"\" width=\"264\" height=\"49\" /><img src=\"https://www.google.com/url?sa=i&amp;source=imgres&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwjC48TjsJfmAhWMF6YKHe17ASQQjRx6BAgBEAQ&amp;url=https%3A%2F%2Faimatchmaker.com%2F&amp;psig=AOvVaw3BVrbHJP-t5ilfKfY5_xff&amp;ust=1575390418381030\" alt=\"\" /></p>\r\n<p>&nbsp;</p>', 1);
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id` int(5) UNSIGNED NOT NULL,
+  `file` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `text` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sh` int(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `file`, `title`, `text`, `sh`) VALUES
+(2, 'head.jpg', '123123', '個性開朗，工作態度認真負責、細心，自我要求高，熟悉團隊合作，樂於助人及擅於工作協調溝通，曾專職負責包括Disney、Warner Brother. Universal 等外籍客戶之製作技術溝通與進度協調等工作項目。', 0),
+(4, 'page-0003-1.jpg', 'ghfghfghf', 'gdfgdfgdfgdfghhhhh\r\n5556666', 0);
 
 -- --------------------------------------------------------
 
@@ -152,7 +196,7 @@ CREATE TABLE `info` (
 --
 
 INSERT INTO `info` (`id`, `file`, `text`, `sh`) VALUES
-(1, 'dribbble-devcard.png', 'ddd111122hhhh2', 0);
+(3, '02B03.jpg', '12213fdgdfg', 0);
 
 -- --------------------------------------------------------
 
@@ -319,9 +363,21 @@ ALTER TABLE `bottom`
   ADD PRIMARY KEY (`id`);
 
 --
+-- 資料表索引 `cond`
+--
+ALTER TABLE `cond`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- 資料表索引 `doc`
 --
 ALTER TABLE `doc`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- 資料表索引 `gallery`
+--
+ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -407,10 +463,22 @@ ALTER TABLE `bottom`
   MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- 使用資料表自動遞增(AUTO_INCREMENT) `cond`
+--
+ALTER TABLE `cond`
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- 使用資料表自動遞增(AUTO_INCREMENT) `doc`
 --
 ALTER TABLE `doc`
   MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `history`
@@ -428,7 +496,7 @@ ALTER TABLE `image`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `info`
 --
 ALTER TABLE `info`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `menu`
