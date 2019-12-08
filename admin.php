@@ -1,5 +1,5 @@
 <?php
-include_once "base.php";
+include_once "./base.php";
 
 ?>
 
@@ -20,18 +20,27 @@ include_once "base.php";
   <!--載入jQuery-->
   <script src="./js/jquery-3.4.1.min.js"></script>
   <script src="./js/js.js"></script>
+  <script src="./tinymce/js/tinymce/tinymce.min.js"></script>
+  <script>
+  tinymce.init({
+    selector:'textarea',
+    branding: false,
+    language: "zh_TW",
+    plugins : "advlist autolink link image lists charmap print preview"
+    });
+  </script>
   <noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 
 <body>
-<div id="cover" style="display:none; ">
+  <div id="cover" style="display:none; ">
     <div id="coverr">
-      <a class="close" style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;"
+      <a style="position:absolute; right:5px; top:4px; border:solid 1px gray; padding:5px; border-radi  us:5px; cursor:pointer; z-index:9999;"
         onclick="cl(&#39;#cover&#39;)">
-        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M17.953 7.453L13.422 12l4.531 4.547-1.406 1.406L12 13.422l-4.547 4.531-1.406-1.406L10.578 12 6.047 7.453l1.406-1.406L12 10.578l4.547-4.531z" fill-rule="evenodd"></path></svg>
+        CLOSE
       </a>
-      <div id="cvr" style="z-index:9898;"></div>
+      <div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; padding:20px;z-index:9898;"></div>
     </div>
   </div>
   <div id="main">
@@ -54,39 +63,46 @@ include_once "base.php";
 
         <div class="menu">
           <div>
-          <a href="?do=title"  id="title">選單標題區管理</a>
-          <a href="?do=info" id="info">個人資料管理</a>
-          <a href="?do=cond" id="cond">求職條件管理</a>
-          <a href="?do=skill" id="skill">技能管理</a>
-          <a href="?do=history" id="history">經歷管理</a>
-          <a href="?do=school" id="school">學歷管理</a>
-          <a href="?do=project" id="project">參與專案管理</a>
-          <a href="?do=gallery" id="gallery">作品資料管理</a>
-          <a href="?do=doc" id="doc">自傳管理</a>
-          <a href="?do=admin" id="admin">管理者帳號管理</a>
-          <a href="?do=total" id="total">進站總人數管理</a>
-          <a href="?do=bottom" id="bottom">頁尾版權資料管理</a>
+          <a href="#"  onclick="loadpage('title.php')" id="title">選單標題區管理</a>
+          <a href="#" onclick="loadpage('info.php')" id="info">個人資料管理</a>
+          <a href="#" onclick="loadpage('cond.php')" id="cond">求職條件管理</a>
+          <a href="#" onclick="loadpage('skill.php')" id="skill">技能管理</a>
+          <a href="#" onclick="loadpage('history.php')" id="history">經歷管理</a>
+          <a href="#" onclick="loadpage('school.php')" id="school">學歷管理</a>
+          <a href="#" onclick="loadpage('gallery.php')" id="gallery">作品資料管理</a>
+          <a href="#" onclick="loadpage('doc.php')" id="doc">自傳管理</a>
+          <a href="#" onclick="loadpage('admin.php')" id="admin">管理者帳號管理</a>
+          <a href="#" onclick="loadpage('total.php')" id="total">進站總人數管理</a>
+          <a href="#" onclick="loadpage('bottom.php')" id="bottom">頁尾版權資料管理</a>
           </div>
           <div class="dbor" >
             <span class="t">進站總人數 :<?=$_SESSION['total'];?></span>
           </div>
         </div>
         <div class="content">
+          
         <?php
               //利用網址傳值的方式來取得$_GET['do']的值，這個值代表我們要include進來的檔案
               $do=(!empty($_GET['do']))?$_GET['do']:"title";
               $type=(!empty($_GET['type']))?$_GET['type']:"video";
+              $p=(!empty($_GET['p']))?$_GET['p']:"0";
+             /*  echo $p; */
+             /* echo $do; */
 
               //我們將所有要include進來的後台功能檔案都放在 ./admin 目錄下，因此根據GET的值來組合include檔的完整路徑
-              $path="./admin/" . $do . ".php";
+ /*              $path="./admin/" . $do . ".php";
 
               //判斷檔案是否存在來決定是要匯入檔案還是預設匯入title.php
               if(file_exists($path)){
                 include $path;
               }else{
                 include "./admin/title.php";
-              }
-              echo $do
+              }*/
+              
+
+               /*  console.log($do); */             
+                
+              
         ?>          
         </div>
       </div>
@@ -100,41 +116,64 @@ include_once "base.php";
 
 </html>
 <script>
+
+  var show ="<?php echo $do ?>";
+  var type ="<?php echo $type ?>";
+  var p ="<?php echo $p ?>";
+  /* console.log(p); */
+
   //建立一個函式loadpage(page)用來載入內容至content區塊中
-/*   loadpage('title.php');
 
-  function loadpage(page) { */
+/* if(show == 'gallery'){
+ loadpage(show+'.php', type ); 
+ function loadpage(page,sel) {
+  $(".content").load("./admin/" + page + ' .'+sel);
+}
+}else{ */
+ loadpage(show+'.php'); 
+ function loadpage(page) {
+  $(".content").load("./admin/" + page);
+ }   
+/* } */
 
 
+
+   
+/*  loadpage('title.php'); */
+
+/*   function loadpage(page) {  */
     /*  $.get("./results/"+page,function(res){
         console.log(res)
       $(".content").html(res)  
-      }
-      ) */
-/*     $(".content").load("./admin/" + page) //最簡潔的模式，就這一行~
-
-  } */
-
-$(function(){
-
- var show ="#<?php echo $do ?>";
+      }) */
+/*   $(".content").load("./admin/" + page + ' .'+sel); */
+// $(".content").load("./admin/" + page); //最簡潔的模式，就這一行~
+ 
+/*   } */
+console.log(show);
+console.log(type);
+console.log(p);
 /* alert(show); */
-  
-  $(show).removeClass("menu a").addClass("menushow");
- /*  $(show).siblings().removeClass("menushow").addClass("menu a"); */
-/*     let idx = $("menu a").get(do).index();
-    $(".menu a").eq(idx).removeClass("menu a").addClass("menushow");
-    $(".menu a").eq(idx).siblings().removeClass("menushow").addClass("menu a");
-     */
+/*   $.get("./admin/gallery.php", p, function(res){
+    $(".content").html(res);
+  }); */
 
-  
-/*   $(".menu a").on("click", function () {
+ //第一欄選單亮起
+  $('#'+show).removeClass("menu a").addClass("menushow");
+  $('#'+show).siblings().removeClass("menushow");
+   
+   $(".menu a").on("click", function () {
     let idx = $(this).index();
     $(".menu a").eq(idx).removeClass("menu a").addClass("menushow");
     $(".menu a").eq(idx).siblings().removeClass("menushow").addClass("menu a");
-    
-  }) */
   
+/*     loadpage(show+'.php'); 
+    function loadpage(page) {
+      $(".content").load("./admin/" + page);
+    }  */ 
 })
+
+
+
 
 </script>
