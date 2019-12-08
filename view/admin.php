@@ -1,24 +1,24 @@
 <h3 class="cent">新增管理者帳號</h3>
 <hr>
-<form action="./api/add.php" method="post" enctype="multipart/form-data" style="width:60%;margin:auto">
-<table>
+<form action="./api/add.php" method="post" enctype="multipart/form-data" style="width:60%;margin:auto;margin-top:40px">
+<table class="just3">
     <tr>
-        <td>帳號：</td>
-        <td><input type="text" name="acc"></td>
+        <td style="width:30%">帳&nbsp;&emsp;&nbsp;&emsp;&nbsp;號：</td>
+        <td><input type="text" name="acc" style="width: 99%"></td>
     </tr>
     <tr>
-        <td>密碼：</td>
-        <td><input type="password" name="pw"></td>
+        <td>密&nbsp;&emsp;&nbsp;&emsp;&nbsp;碼：</td>
+        <td><input type="password" name="pw" style="width: 99%"></td>
     </tr>
     <tr>
-        <td>確認密碼：</td>
-        <td><input type="password" name="pw2"></td>
+        <td>確 認 密 碼：</td>
+        <td><input type="password" name="pw2" style="width: 99%"></td>
     </tr>
-    <tr class="cent">
-        <td colspan="2">
+    <tr style="height:70px; padding-top:20px">
+        <td colspan="2" >
             <input type="hidden" name="table" value="<?=$_GET['table'];?>">
-            <input type="submit" value="新增">
             <input type="reset" value="重置">
+            <input type="submit" value="新增">
         </td>
     </tr>
 </table>

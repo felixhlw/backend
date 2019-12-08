@@ -1,27 +1,37 @@
-<h3 class="cent">新增標題區圖片</h3>
+<?php
+$type=$_GET['type'];
+
+
+
+?>
+
+<h3 class="cent">新增<?=$type;?>作品圖片</h3>
 <hr>
-<form action="./api/add.php" method="post" enctype="multipart/form-data" style="width:80%;margin:auto">
-<table >
+<form action="./api/add.php" method="post" enctype="multipart/form-data" style="width:80%;margin:auto;margin-top:40px">
+<table class="just3">
     <tr>
-        <td>標題區圖片(頭像)：</td>
-        <td><input type="file" name="file" id="file"></td>
+        <td>作 品 圖 片：</td>
+        <td><input type="file" name="file" id="file" style="width:99%"></td>
     </tr>
     <tr>
-        <td>標題：</td>
-        <td><input type="title" name="text" id="text"></td>
+        <td>標&nbsp;&emsp;&nbsp;&emsp;&nbsp;題：</td>
+        <td><input type="text" name="title" id="text" style="width:99%"></td>
     </tr>
     <tr>
-        <td>說明：</td>
-        <td>
-                <textarea name="text" id="text" cols="70" rows="5"></textarea>
-        </td>
+        <td>說&nbsp;&emsp;&nbsp;&emsp;&nbsp;明：</td>
+        <td><textarea name="text" id="text" cols="250" rows="5" style="width:99%"></textarea></td>
+    </tr>
+    <tr>
+        <td>連&nbsp;&emsp;&nbsp;&emsp;&nbsp;結：</td>
+        <td><textarea name="link" id="link" cols="250" rows="5" style="width:99%"></textarea></td>
 
     </tr>
     <tr class="cent">
         <td colspan="2">
             <input type="hidden" name="table" value="<?=$_GET['table'];?>">
-            <input type="submit" value="新增">
-            <input type="reset" value="重置">
+            <input type="hidden" name="type" value="<?=$_GET['type'];?>">
+            <input type="reset" value="重 置">
+            <input type="submit" value="新 增">
         </td>
     </tr>
 </table>

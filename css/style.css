@@ -13,7 +13,7 @@ body{
 }
 #main{
   width:1280px;
-  height:800px;
+  height:850px;
   margin:auto;
   background: #ffffff;
 }
@@ -48,7 +48,7 @@ body{
 .flex {
   display: flex;
   align-items: stretch;
-  height: 750px;
+  height: 810px;
   margin: 0px;
   padding: 25px;
   background-color: #eaeaea;
@@ -118,6 +118,7 @@ flex-shrink: 1;
 flex-basis: 0%;
 background-color: #dbdbdb;
 border-radius: 15px;
+overflow:hidden;
 
 
 }
@@ -135,10 +136,27 @@ border-radius: 15px;
   width:99%; 
   height:96%; 
   margin:auto; 
+  margin-bottom: 20px;
   overflow:auto; 
   border:#666 1px solid;"
   border-radius: 10px;
+  position:relative;
 }
+/* .frame::before{
+  content:"";
+  position: absolute;
+  width: 500px;
+  height: 200px;
+  background: rgb;
+  top: 0px;
+  left: 0;
+} */
+
+.btn{
+  margin-top:-5px;
+  background: lightgrey;
+}
+
 .exit{
   margin: 0 auto;
   padding-top:32px;
@@ -163,6 +181,89 @@ input[type=checkbox],input[type=radio] {
   filter: drop-shadow(0px 3px 1px rgb(178, 178, 178));
   zoom: 1.2;
   cursor: pointer;
+}
+
+table tr{
+  padding-top:0px;
+
+}
+table td{
+  margin-top:0px;
+  padding:0px 2px;
+}
+
+/* .just table  {
+  width:100%;
+  display:block;
+  text-align: justify; 
+  text-justify:distribute-all-lines;
+  text-align-last:justify;
+
+} */
+.just td:nth-child(odd){
+  width:30% !important;
+  text-align: justify; 
+  text-justify:distribute-all-lines;
+  text-align-last:justify;
+
+}
+.just td:nth-child(even){
+  width:70% !important;
+}
+
+.just input, textarea {
+  width:250px;
+}
+
+
+.just2 td:nth-child(odd){
+  width:50% !important;
+  text-align: justify; 
+  text-justify:distribute-all-lines;
+  text-align-last:justify;
+
+}
+.just2 td:nth-child(even){
+  width:50% !important;
+}
+
+.just2 input[type="text"],input[type="date"], textarea {
+  width:250px;
+}
+
+.just3 {
+  margin:auto;
+  vertical-align: middle;
+}
+
+.just3 td:nth-child(odd){
+  width:25% ;
+  text-align: justify; 
+  text-justify:distribute-all-lines;
+  text-align-last:justify;
+
+}
+.just3 td:nth-child(even){
+  width:75% ;
+}
+
+.just3 input[type="text"],input[type="date"], textarea {
+  /* width:350px; */
+}
+.close{
+/*   width: 30px;
+  height: 30px; */
+  margin: 5px;
+  padding: 5px 5px 1px 5px;
+  border-radius: 10px;
+}
+.close:hover{
+  background: lightgrey;
+}
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover{
+  color: red;
 }
 /* .hasborder-c { 
   clear: both;

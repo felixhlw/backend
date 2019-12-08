@@ -3,6 +3,7 @@ include_once "../base.php";
 
 //取得要編輯資料的資料表名稱
 $table=$_POST['table'];
+$type=$_POST['type'];
 
 //利用迴圈來判斷資料要刪除還是更新內容
 foreach($_POST['id'] as $key => $id){
@@ -21,11 +22,22 @@ foreach($_POST['id'] as $key => $id){
                 $data['text']=$_POST['text'][$key];
                 $data['sh']=($id==$_POST['sh'])?1:0;
             break;
+            case "info":
+                //將欄位內容更新成表單傳遞過來的內容
+                $data["name"]=$_POST['name'][$key];
+                $data["birthday"]=$_POST['birthday'][$key];
+                $data["tel"]=$_POST['tel'][$key];
+                $data["addr"]=$_POST['addr'][$key];
+                $data["email"]=$_POST['email'][$key];
+                $data["intro"]=$_POST['intro'][$key];
+                $data['sh']=($id==$_POST['sh'])?1:0;
+            break;
             case "gallery":
                 //將欄位內容更新成表單傳遞過來的內容
                 $data['title']=$_POST['title'][$key];
                 $data['text']=$_POST['text'][$key];
-                $data['sh']=($id==$_POST['sh'])?1:0;
+                $data['link']=$_POST['link'][$key];
+                $data['sh']=(in_array($id,$_POST['sh']))?1:0;
             break;
             case "admin":
                 $data['acc']=$_POST['acc'][$key];
@@ -49,6 +61,12 @@ foreach($_POST['id'] as $key => $id){
 }
 
 //返回功能頁面
-to("../admin.php?do=$table");
+if(!empty($type)){
+
+    to("../admin.php?do=$table&type=$type"); 
+
+}else{
+    to("../admin.php?do=$table");
+}
 
 ?>

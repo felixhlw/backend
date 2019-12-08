@@ -30,8 +30,23 @@ body
 	left:0px;
 	right:0px;
 	bottom:0px;
+	padding: 0px;
 	margin:auto;
 	overflow:auto;
+	border-radius: 15px;
+}
+
+#cvr{
+/* 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; */
+	position:absolute; 
+	padding: 32px;
+	width:100%; 
+	height:100%; 
+	margin:auto; 
+/* 	border-radius: 15px; */
 }
 /* #main
 {
@@ -133,13 +148,54 @@ body
 {
 	text-align:center;
 }
-input,button
+input
 {
 	border:#999 1px solid;
-	border-radius:3px;
+	border-radius:5px;
 	background:#EFEFEF;
-	padding:5px;
-	margin:3px;
+	padding:5px 10px;
+	font-weight: 600;
+	font-size: 16px;
+	margin:5px 0;
+	cursor: pointer;
+	outline: none;
+}
+input[type="date"]
+{
+	border:#999 1px solid;
+	border-radius:5px;
+	background:#EFEFEF;
+	padding:5px 10px;
+	font-weight: 600;
+	font-size: 16px;
+	margin:1px 0 1px 1px;
+	cursor: pointer;
+	outline: none;
+}
+input[type="file"]
+{
+	border:#999 1px solid;
+	border-radius:5px;
+	background:#EFEFEF;
+	padding:5px 10px;
+	font-weight: 600;
+	font-size: 20px;
+	margin:1px 0 1px 1px;
+	cursor: pointer;
+	outline: none;
+}
+
+button
+{
+	border:#999 1px solid;
+	border-radius:5px;
+	background:#EFEFEF;
+	padding:5px 10px;
+	font-weight: 600;
+	font-size: 16px;
+	margin:10px 0;
+	cursor: pointer;
+	outline: none;
 }
 input:active,button:active
 {
@@ -147,11 +203,15 @@ input:active,button:active
 }
 input[type=text],input[type=password]
 {
-	width:150px;
+	margin:2px ;
 }
 input:focus,button:focus
 {
 	box-shadow:#09C 0px 0px 3px .3px;
+}
+textarea{
+	margin:1px;
+
 }
 .yel tr
 {

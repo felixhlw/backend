@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #content{
+            margin: 5px 5px;
+            border: solid 1px gray;
+            width: 50vw;
+        }
+        #content div{
+            padding: 10px;
+        }
+        input[type="button"]{
+            width: calc(50vw / 4 );
+            font-size: 24px;
+        }
+        .btn{
+            padding: 10px;
+            border-radius: 5px;
+            outline:none;
+        }
+
+        #content > div:first-child {
+           display: block;
+        }
+        #content > div:not(:first-child) {
+           display: none;
+        }
+        #btns input[type="button"]:first-child{
+           /* color: red; */
+           background: rgb(167, 241, 157);
+        }
+        #btns input[type="button"]:not(:first-child){
+           /* color: gray; */
+           background: lightgray;
+
+        }
+    </style>
+
+</head>
+<body>
+        <div id="btns">
+                <input type="button" value="健康新知" class="btn">
+                <input type="button" value="菸害防制" class="btn">
+                <input type="button" value="癌症防治" class="btn">
+                <input type="button" value="慢性病防治" class="btn">
+            </div>
+            <div id="content">
+                <div>健康新知 健康新知 健康新知 <br> 健康新知 健康新知 健康新知<br> 健康新知 健康新知 健康新知 </div>
+                <div> 菸害防制 菸害防制 菸害防制 <br> 菸害防制 菸害防制 菸害防制<br> 菸害防制 菸害防制 菸害防制</div>
+                <div>癌症防治 癌症防治 癌症防治 <br> 癌症防治 癌症防治 癌症防治<br> 癌症防治 癌症防治 癌症防治</div>
+                <div>慢性病防治 慢性病防治 <br> 慢性病防治 慢性病防治 慢性病防治<br> 慢性病防治 慢性病防治 慢性病防治</div>
+            </div> 
+
+
+    <script src="./jquery-3.4.1.min.js"></script>
+    <script>
+        $(function(){
+
+            /* $("#content div").eq(0).siblings().hide(); */
+            /* $("#content div").eq(0).show(); */
+            $(".btn").on("click", function(){
+                /* console.log($(this).index()); */
+                $(this).css("background", "rgb(167, 241, 157)");
+                $(this).siblings().css("background", "lightgray");
+                a=$(this).index();
+                $("#content div").hide();
+                $("#content div").eq(a).show();
+            })
+})
+    </script>
+
+</body>
+</html>

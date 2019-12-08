@@ -3,6 +3,7 @@ include_once "../base.php";
 
 //取得要編輯資料的資料表名稱
 $table=$_POST['table'];
+$type=$_POST['type'];
 
 //取得要編輯的資料id及資料內容
 $id=$_POST['id'];
@@ -18,5 +19,5 @@ if(!empty($_FILES['file']['tmp_name'])){
 }
 
 //返回功能頁面
-to("../admin.php?do=$table");
+to("../admin.php?do=$table&type=$type");
 ?>

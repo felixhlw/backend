@@ -14,8 +14,8 @@
     <tr class="cent">
         <td colspan="2">
             <input type="hidden" name="table" value="<?=$_GET['table'];?>">
-            <input type="submit" value="新增">
             <input type="reset" value="重置">
+            <input type="submit" value="新增">
         </td>
     </tr>
 </table>

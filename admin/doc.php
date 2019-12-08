@@ -1,6 +1,6 @@
 
 <?php
-include_once "../base.php";
+include_once "./base.php";
 //建立一個資料表專用的變數，後續需要使用到資料表名稱的地方都使用這個變數即可
 //可以減少手打的錯誤，並且方便其他功能的延用
  $useTable="doc";
@@ -19,7 +19,10 @@ include_once "../base.php";
     selector:'textarea',
     branding: false,
     language: "zh_TW",
-    plugins : "advlist autolink link image lists charmap print preview"
+    plugins : "code advlist autolink link image media hr table lists insertdatetime toc image imagetools charmap emoticons media print preview",
+    /* toolbar: "code", "styleselect" */
+   
+ /*    menubar: "file edit insert view format table tools help" */
     });
   </script>
 </head>
@@ -45,7 +48,7 @@ include_once "../base.php";
         ?>
         <tr class="cent">
           <td>
-            <textarea name="text[]" id="editor1" style="width:98%;height:260px"><?=$r['text'];?></textarea>
+            <textarea name="text[]" id="editor1" style="width:98%;height:480px"><?=$r['text'];?></textarea>
 
 
 
@@ -68,7 +71,7 @@ include_once "../base.php";
         ?>
       </tbody>
     </table>
-    <table style="margin-top:40px; width:70%;">
+    <table style="margin-top:0px; width:95%;">
       <tbody>
         <tr>
           <!--這裹帶入一個隱藏欄位用來存放資料表名稱，以利api識別要處理的目標資料表-->
@@ -76,7 +79,7 @@ include_once "../base.php";
 
           <!--這裹使用素材提供的op()函式來載入新增資料需要的表單檔案，
               同時利用get機制帶入相關的資料表名稱等資訊-->
-          <td width="200px">
+          <td >
             <input type="button"      
                    onclick="op('#cover','#cvr','./view/<?=$useTable;?>.php?table=<?=$useTable;?>')" 
                    value="新增自傳資料">
@@ -101,7 +104,7 @@ include_once "../base.php";
   		theme: "modern", // 模板風格
   		plugins : "advlist autolink link image lists charmap print preview", // 套件設定: 進階清單、自動連結、連結、上傳圖片、清單、特殊字元表、列印、預覽
   		mobile: { // 行動裝置設定
-  		  	theme: "mobile", // 模板風格
+  		  theme: "mobile", // 模板風格
   			plugins: [ "autosave", "lists", "autolink" ],  // 套件設定: 自動儲存、清單、自動連結
   			toolbar: [ "undo", "bold", "italic", "styleselect","table","link image media","mybutton" ]  // 工具列設定: 復原、粗體、斜體、樣式表
   		} 

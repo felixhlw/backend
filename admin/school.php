@@ -1,10 +1,28 @@
 <?php
-include_once "../base.php";
+include_once "./base.php";
 //建立一個資料表專用的變數，後續需要使用到資料表名稱的地方都使用這個變數即可
 //可以減少手打的錯誤，並且方便其他功能的延用
  $useTable="school";
 
 ?>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+  tinymce.init({
+    selector:'textarea',
+    branding: false,
+    language: "zh_TW",
+    plugins : "code advlist autolink link image media hr table lists insertdatetime toc image imagetools charmap emoticons media print preview",
+    /* toolbar: "code", "styleselect" */
+   
+ /*    menubar: "file edit insert view format table tools help" */
+    });
+  </script>
+</head>
 <div class="frame">
   <p class="t cent botli">學歷資料管理</p>
   <form method="post" action="./api/edit.php">
@@ -43,15 +61,15 @@ include_once "../base.php";
         ?>
       </tbody>
     </table>
-    <table style="margin-top:40px; width:70%;">
+    <table style="margin-top:0px; width:72%;">
       <tbody>
-        <tr>
+        <tr class="just3">
           <!--這裹帶入一個隱藏欄位用來存放資料表名稱，以利api識別要處理的目標資料表-->
           <input type="hidden" name="table" value="<?=$useTable;?>">
 
           <!--這裹使用素材提供的op()函式來載入新增資料需要的表單檔案，
               同時利用get機制帶入相關的資料表名稱等資訊-->
-          <td width="200px">
+          <td >
             <input type="button"      
                    onclick="op('#cover','#cvr','./view/<?=$useTable;?>.php?table=<?=$useTable;?>')" 
                    value="新增學歷資料">

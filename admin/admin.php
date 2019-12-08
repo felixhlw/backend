@@ -1,5 +1,5 @@
 <?php
-include_once "../base.php";
+include_once "./base.php";
 //建立一個資料表專用的變數，後續需要使用到資料表名稱的地方都使用這個變數即可
 //可以減少手打的錯誤，並且方便其他功能的延用
  $useTable="admin";
@@ -43,15 +43,15 @@ include_once "../base.php";
         ?>
       </tbody>
     </table>
-    <table style="margin-top:40px; width:70%;">
-      <tbody>
+    <table style="margin-top:40px; padding-left:85px;width:92%;">
+      <tbody >
         <tr>
           <!--這裹帶入一個隱藏欄位用來存放資料表名稱，以利api識別要處理的目標資料表-->
           <input type="hidden" name="table" value="<?=$useTable;?>">
 
           <!--這裹使用素材提供的op()函式來載入新增資料需要的表單檔案，
               同時利用get機制帶入相關的資料表名稱等資訊-->
-          <td width="200px">
+          <td >
             <input type="button"      
                    onclick="op('#cover','#cvr','./view/<?=$useTable;?>.php?table=<?=$useTable;?>')" 
                    value="新增管理者帳號">
