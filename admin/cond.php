@@ -1,10 +1,28 @@
 <?php
-include_once "../base.php";
+include_once "./base.php";
 //建立一個資料表專用的變數，後續需要使用到資料表名稱的地方都使用這個變數即可
 //可以減少手打的錯誤，並且方便其他功能的延用
  $useTable="cond";
 
 ?>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+  <script>
+  tinymce.init({
+    selector:'textarea',
+    branding: false,
+    language: "zh_TW",
+    plugins : "code advlist autolink link image media hr table lists insertdatetime toc image imagetools charmap emoticons media print preview",
+    /* toolbar: "code", "styleselect" */
+   
+ /*    menubar: "file edit insert view format table tools help" */
+    });
+  </script>
+</head>
 <div class="frame">
   <p class="t cent botli">求職條件管理</p>
   <form method="post" action="./api/edit.php">
@@ -43,7 +61,7 @@ include_once "../base.php";
         ?>
       </tbody>
     </table>
-    <table style="margin-top:0px; width:73%; margin-left:32px">
+    <table style="margin-top:0px; width:73%; margin-left:0px">
       <tbody>
       <tr class="just3">
           <!--這裹帶入一個隱藏欄位用來存放資料表名稱，以利api識別要處理的目標資料表-->

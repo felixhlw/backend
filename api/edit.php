@@ -4,6 +4,7 @@ include_once "../base.php";
 //取得要編輯資料的資料表名稱
 $table=$_POST['table'];
 $type=$_POST['type'];
+$p=$_POST['p'];
 
 //利用迴圈來判斷資料要刪除還是更新內容
 foreach($_POST['id'] as $key => $id){
@@ -63,7 +64,7 @@ foreach($_POST['id'] as $key => $id){
 //返回功能頁面
 if(!empty($type)){
 
-    to("../admin.php?do=$table&type=$type"); 
+    to("../admin.php?do=$table&type=$type&p=$p"); 
 
 }else{
     to("../admin.php?do=$table");

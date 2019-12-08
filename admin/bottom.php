@@ -1,6 +1,6 @@
 <?php
-include_once "../base.php";
-?>.
+include_once "./base.php";
+?>
 <div class="frame">
   <p class="t cent botli">頁尾版權資料管理</p>
   <form method="post" action="./api/bottom.php">

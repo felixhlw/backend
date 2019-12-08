@@ -234,6 +234,9 @@ table td{
 .just3 {
   margin:auto;
   vertical-align: middle;
+  font-size: 18px;
+  font-weight: 600;
+  color: #69675c;
 }
 
 .just3 td:nth-child(odd){
