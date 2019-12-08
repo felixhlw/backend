@@ -9,6 +9,7 @@ include_once "./base.php";
  }else{
     $type="video";
  }
+ 
 /*  echo $type; */
 
  ?>
@@ -87,6 +88,7 @@ include_once "./base.php";
 
             <!--這裹帶入一個隱藏欄位用來存放每筆資料的id，以利識別-->
          <input type="hidden" name="id[]" value="<?=$r['id'];?>">
+         <input type="hidden" name="p" value="<?=$p;?>">
 
 
             <!-- <label class='hasborder'><input type='checkbox' /></label> -->
@@ -103,7 +105,6 @@ include_once "./base.php";
     <div class="cent"> 
 
      <?php
-
           if(($p-1)>0){
           echo "<a href='admin.php?do=$useTable&type=$type&p=".($p-1)."' style='text-decoration:none'> < </a>";
           }
@@ -114,11 +115,8 @@ include_once "./base.php";
         if(($p+1)<=$pages){
           echo "<a href='admin.php?do=$useTable&type=$type&p=".($p+1)."' style='text-decoration:none'> > </a>";          
         }
-
-?>
-    
+    ?>
    </div> 
-
 
 
     <table style="margin-top:0px; width:98%;">
