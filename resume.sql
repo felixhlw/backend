@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2019 年 12 月 08 日 11:20
+-- 產生時間： 2019 年 12 月 09 日 01:20
 -- 伺服器版本： 10.4.6-MariaDB
 -- PHP 版本： 7.1.32
 
@@ -91,9 +91,9 @@ CREATE TABLE `cond` (
 --
 
 INSERT INTO `cond` (`id`, `file`, `text`, `sh`) VALUES
-(1, '', '錢多事少離家近', 1),
-(2, '', 'wewewerwer', 1),
-(3, '', 'ghfghfghfghfgh', 1);
+(1, '', '<p><strong>希望工作地點: </strong></p>\r\n<p>台北市、新北市</p>', 1),
+(2, '', '<p><strong>希望待遇:</strong></p>', 1),
+(3, '', '<p><strong>希望應徵職務:</strong></p>', 1);
 
 -- --------------------------------------------------------
 
@@ -113,7 +113,7 @@ CREATE TABLE `doc` (
 --
 
 INSERT INTO `doc` (`id`, `file`, `text`, `sh`) VALUES
-(5, '', '<p>我是王宏禮,在台北出生成長,專長是美術設計及影音製作,自幼便鍾情於美術繪畫,也從 國中開始拜入名師門下習畫,曾就讀復興美工並以平面設計組第一名成績畢業,畢業後迫不 及待想發揮所長,便直接進入社會就業,有幸進入台灣第一家成立的東方廣告股份有限公 司,在職 2 年期間學習甚多,也充分了解學識不足及其重要性,於是便離職專心補習報考大 學,半年後考進輔大應用美術系,在學期間成績優異並保持與廣告公司聯繫,以接 case 方式賺取生活開銷並累積相關的工作經驗。</p>\r\n<p>&nbsp;</p>\r\n<p>在大學求學期間專攻電腦動畫,在當時主流電腦仍為 486/586 的 90 年代,校內擁有當時最先進的 SGI 工作站及 wavefront 3D 軟體,然而當時的動畫軟體操作起來,並無現今普遍具備之 fancy 介面,許多功能都需要以指令及參數方式執行,也因此習得相關 script 語法的使用。畢業製作以 3D 電腦動畫呈現,也獲師長及業界好評,從此也踏入電腦影音相關工作,發揮所學與所長。</p>\r\n<p>&nbsp;</p>\r\n<p>隨著電腦技術進步，網路應用崛起，在多年職場歷程中，也往往出現除影音製作外的網站相關製作需求，多次參與並負責從前期企畫到完成上線的網站建置專案經歷，讓我體認到具備相關專業技術能力的重要性，期間除陸陸續續的自我學習之外，也進入職訓局開設的專班修習更專業且全面的相關技術，包括HTML5、CSS3、PHP、Javascript、JQuery、Ajax、Mysql等前、後端程式能力，同時也能結合本身所學，期許能提供更全面的服務。</p>\r\n<p>&nbsp;</p>\r\n<p>【我與家人】&nbsp;父親為職業軍人退休,母親為家管,我排行老二,有一位兄長與一位妹妹,兄長任職於中央 圖書館,妹妹從事汽車零件貿易業,妻子為專業保母,有一男一女 2 個念高中的小孩,平時 彼此間皆能互相扶持與體諒,家人相處融洽。&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>【我與工作】&nbsp;透過早年在東方廣告、聯線廣告的廣告美術設計及媒體操作工作經驗,從廣告中接觸到許多電腦動畫及特效,加上大學所學,便立志進入相關產業,歷經在大眾電腦從事動畫軟體教學、系統整合安裝及銷售支援經驗,隨後進入電視台從事專業影片製作,再到進入宏廣卡通動畫公司負責製作技術統籌及人員教育訓練及生產線規劃等,期間曾負責台北、大陸、泰國三地之 技術相關業務及負責美國迪士尼、華納、環球、MGM 米高梅、nickelodeon、Stretch Film、丹麥 A-Film 等公司之往來技術研發及配合業務以及國內的故宮 e-learning 學習網製 作案、教育部六大學習網之自然生態網規畫製作等大型專案,一路走來皆與同事相處融洽並 多得貴人相助,得以累積豐富經驗及能力,也希望能在往後的職場生涯中繼續為公司貢獻所長。</p>', 1);
+(5, '', '<p>我是王宏禮,在台北出生成長,專長是美術設計及影音製作,自幼便鍾情於美術繪畫,從國中開始便拜入名師門下習畫,後來就讀復興美工並以平面設計組第一名成績畢業,畢業後迫不及待想發揮所長,便直接進入社會就業,有幸進入台灣第一家成立的東方廣告股份有限公司,在職 2 年期間學習甚多,也充分體認到學識及眼界上的不足,於是便離職專心投身補習期許能考取大學,半年後順利考進輔大應用美術系,在學四年期間成績優異並持續保持與廣告公司的關係,並以接 case方式賺取生活開銷並累積相關的工作經驗。</p>\r\n<p>&nbsp;</p>\r\n<p>於大學求學期間專攻電腦動畫,當時乃主流電腦仍為 486/586 的 90 年代,校內擁有當時最先進的 SGI 工作站及 wavefront 3D 軟體,然而當時的動畫軟體操作起來,並無現今普遍具備之 fancy 介面,許多功能都需要以指令及參數方式執行,也因此接觸並習得相關C語言及script 語法的使用。畢業製作以 3D 電腦動畫呈現, 成果獲師長及業界好評,從此也順利踏入電腦影音相關工作,發揮所學與所長。</p>\r\n<p>&nbsp;</p>\r\n<p>隨著電腦技術進步，網路應用崛起，在多年職場歷程中，也往往出現除影音製作外的網站相關製作需求，多次參與並負責從前期企畫到完成上線的網站建置專案經歷，讓我體認到具備相關專業技術能力的重要性，期間除陸陸續續的自我學習之外，也進入職訓局開設的專班修習更專業且全面的相關技術，包括HTML5、CSS3、PHP、Javascript、JQuery、Ajax、Mysql等前、後端程式能力，同時也能結合本身所學，提供更廣泛的服務。</p>\r\n<p>&nbsp;</p>\r\n<p><strong>【我與家人】</strong> 父親為職業軍人退休,母親為家管,我排行第二,有一位兄長與一位妹妹,兄長任職於中央圖書館,妹妹從事汽車零件貿易業,妻子為專業保母,有一男一女 2 個念高中的小孩,平時彼此間皆能互相扶持與體諒,家人相處融洽。&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><strong>【我與工作】</strong> 透過早年在東方廣告、聯線廣告的廣告美術設計及媒體操作工作經驗,從廣告中接觸到許多電腦動畫及特效,加上大學所學,便立志進入相關產業,歷經在大眾電腦從事動畫軟體教學、系統整合安裝及銷售支援經驗,隨後進入電視台從事專業影片製作,再到進入宏廣卡通動畫公司負責製作技術統籌及人員教育訓練及生產線規劃等,期間曾負責台北、大陸、泰國三地之 技術相關業務及負責美國迪士尼、華納、環球、MGM 米高梅、nickelodeon、Stretch Film、丹麥 A-Film 等公司之往來技術研發及配合業務以及國內的故宮 e-learning 學習網製 作案、教育部六大學習網之自然生態網規畫製作等大型專案,一路走來皆與同事相處融洽並 多得貴人相助,得以累積豐富經驗及能力,也希望能在往後的職場生涯中繼續貢獻所長。</p>', 1);
 
 -- --------------------------------------------------------
 
@@ -136,35 +136,34 @@ CREATE TABLE `gallery` (
 --
 
 INSERT INTO `gallery` (`id`, `file`, `title`, `text`, `link`, `type`, `sh`) VALUES
-(10, 'picowork.jpg', 'Picowork', 'hghjghjgh\r\n2136546', '12312312388', 'video', 1),
-(11, 'wifiboy.jpg', 'wifiboy', '123\r\nvbmvnbmvnbmvnbmb', 'google.com', 'video', 1),
-(12, 'heroes1.jpg', '真正的英雄:動畫影片', '製作項目: Rough Animation, Animation, Clean Up, IB, Scanning, Line-test\r\n\r\n客戶: White Knight\r\n\r\n長度: 2D Feature Film – 20 min\r\n\r\n得獎紀錄: 本片榮獲墨西哥2011年度最佳動畫影片大獎(Best Animated Picture” award in Mexico)', '', 'video', 1),
-(18, '11.jpg', 'tarzan', '22233311', '', 'cartoon', 1),
-(19, '61nSaZr8lyL._SY445_.jpg', 'little mermaid', '222111', '', 'cartoon', 1),
-(20, '2.jpg', '', '333333', '', 'cartoon', 1),
-(21, '12.jpg', '', '311222', '', 'cartoon', 1),
-(22, '4.jpg', '', '444666', '', 'cartoon', 1),
-(23, '1.jpg', '', '123123', '', 'cartoon', 1),
-(24, '8.jpg', '', '', '', 'cartoon', 1),
-(25, '9.jpg', '', '', '', 'cartoon', 1),
-(26, '10.jpg', '', '123', '', 'cartoon', 1),
-(27, '7.jpg', '', '123456', '', 'cartoon', 1),
-(28, '6.jpg', '', '222', '', 'cartoon', 1),
-(29, '5.jpg', '', '123', '', 'cartoon', 1),
-(30, 'bululu2.jpg', 'bululu', '222333111fdgdfg', 'fffff', 'video', 1),
-(31, '澳牛部位.jpg', '澳牛部位', '12323213', '', 'video', 1),
-(32, '澳牛等級.jpg', '澳牛等級', '222333333', '', 'video', 1),
-(33, '20170918項目簡報-2-1.jpg', 'hhh111', '', '', 'art', 1),
-(34, 'page-0003-c2.jpg', '12322', '', '', 'art', 1),
-(35, 'page-0003-2.jpg', '22233311133', '', '', 'art', 1),
-(36, 'page-0003-1.jpg', 'hghjghj123', '', '', 'art', 1),
-(37, 'e0790285-b3c5-4162-a0e7-77cfdcd4fb0f.png', '網路小遊戲', 'ghghgh1232122', '', 'cording', 1),
-(38, '影台灣.jpg', '影台灣', '', '', 'video', 1),
-(40, '行動影音.jpg', '行動影音', '', '', 'video', 1),
-(41, '磺火漁祭.jpg', '磺火漁祭', '', '', 'video', 1),
-(42, '米米s.jpg', 'mimi', '', '', 'video', 1),
-(47, 'clock1.jpg', '123', '222', '', 'cording', 1),
-(49, '05王宏禮-府城美食之旅.jpg', '12313', '', '', 'art', 1),
+(10, 'picowork.jpg', 'Picowork 雲端作業系統形象影片', 'Picowork雲端作業系統，全程參與了從整個專案的市場定位、系統功能發想到最後建置完成，共歷時3年，其中包刮UX/UI、logo、icon、介面音效、intro影片及使用教學影片等皆包辦參與企劃及製作。', 'https://www.facebook.com/PicoworkCloud/', 'video', 1),
+(11, 'wifiboy.jpg', 'Wifiboy 學習板介紹影片', '國人自製，超越micro bit的開發學習板，參與了產品測試及Demo影片製作', 'https://wifiboy.org/', 'video', 1),
+(12, 'heroes1.jpg', '真正的英雄:動畫影片', '製作項目: Rough Animation, Animation, Clean Up, IB, Scanning, Line-test\r\n\r\n客戶: White Knight\r\n\r\n長度: 2D Feature Film – 20 min\r\n\r\n得獎紀錄: 本片榮獲墨西哥2011年度最佳動畫影片大獎(Best Animated Picture” award in Mexico)', 'http://www.88studio.com.tw/?p=463', 'video', 1),
+(18, '11.jpg', 'Tarzan', 'Disney', '', 'cartoon', 1),
+(19, '61nSaZr8lyL._SY445_.jpg', 'Little Mermaid', 'Disney', '', 'cartoon', 1),
+(20, '2.jpg', 'Balto series', 'Universal', '', 'cartoon', 1),
+(21, '12.jpg', 'Tom Sawyer', 'MGM', '', 'cartoon', 1),
+(22, '4.jpg', 'Curious George', 'Universal', '', 'cartoon', 1),
+(23, '1.jpg', 'Princess series', 'Disney', '', 'cartoon', 1),
+(24, '8.jpg', 'Courage the Cowardly Dog', 'Stretch Film', '', 'cartoon', 1),
+(25, '9.jpg', 'Land Before Time series', 'Universal', '', 'cartoon', 1),
+(26, '10.jpg', 'Heroes Verdaderos', 'White Knight', '', 'cartoon', 1),
+(27, '7.jpg', 'The Powerpuff Girls', 'Cartoon Network', '', 'cartoon', 1),
+(28, '6.jpg', '大鬧天宮3D', 'Technicolor', '', 'cartoon', 1),
+(29, '5.jpg', '2011首屆動漫春晚', '北京中央電視台', '', 'cartoon', 1),
+(30, 'bululu2.jpg', 'Bululu:DEMO影片', '政府輔導專案企劃及製作', 'http://www.88studio.com.tw/?p=518', 'video', 1),
+(31, '澳牛部位.jpg', '澳洲牛肉部位介紹影片', '企業教育訓練影片企劃及製作', 'http://www.88studio.com.tw/?p=510', 'video', 1),
+(32, '澳牛等級.jpg', '澳洲牛肉等級教學影片', '企業教育訓練影片企劃及製作', 'http://www.88studio.com.tw/?p=512', 'video', 1),
+(33, '哪吒.jpg', '美術及平面設計\r\n', '早期曾為廣告公司繪製一系列插畫稿，並曾獲得時報廣告金像獎銅牌。\r\n此作為電影少年哪吒企劃案之部分造型繪畫稿。', '', 'art', 1),
+(34, 'page-0003-c2.jpg', '', '', '', 'art', 1),
+(35, 'page-0003-2.jpg', '', '', '', 'art', 1),
+(36, 'page-0003-1.jpg', '', '', '', 'art', 1),
+(37, 'plantnvszombie.jpg', '網路小遊戲', '使用HTML5、Java script、CSS3 製作之\"植物打殭屍\"版的類似打地鼠小遊戲', 'https://felixhlw.github.io/zombie/', 'cording', 1),
+(38, '影台灣.jpg', '影台灣簡報影片', '數位內容專案企劃及影片製作', '', 'video', 1),
+(40, '行動影音.jpg', '行動影音教學介紹影片', '行動影音剪輯教學宣傳影片企畫及製作', 'http://www.88studio.com.tw/?p=51&preview=true', 'video', 1),
+(41, '磺火漁祭.jpg', '金山磺火漁祭', '磺火漁祭紀錄影片剪輯、配樂及特效製作', 'http://www.88studio.com.tw/?p=182&preview=true', 'video', 1),
+(42, '米米s.jpg', 'MiMi 繪本動畫系列', 'OEM繪本動畫專案企劃及製作', '', 'video', 1),
+(49, '05王宏禮-府城美食之旅.jpg', '', '', '', 'art', 1),
 (50, '12-02-felix.jpg', '', '', '', 'art', 1),
 (51, '11-01-felix.jpg', '', '', '', 'art', 1),
 (52, '鼠曆-05-王宏禮.jpg', '', '', '', 'art', 1),
@@ -172,7 +171,7 @@ INSERT INTO `gallery` (`id`, `file`, `title`, `text`, `link`, `type`, `sh`) VALU
 (54, '05-bottle.jpg', '', '', '', 'art', 1),
 (55, '05-level_UP.jpg', '', '', '', 'art', 1),
 (56, '休閒中心.jpg', '', '', '', 'art', 1),
-(57, 'clock2.jpg', 'clock2', '', '', 'cording', 1);
+(58, 'clock.jpg', '網路時鐘', '使用HTML5、Java script、CSS3 製作之網頁時鐘', '網頁時鐘1\r\nhttps://felixhlw.github.io/clock/clock.htm/\r\n\r\n網頁時鐘2\r\nhttps://felixhlw.github.io/clock/clock2.htm', 'cording', 1);
 
 -- --------------------------------------------------------
 
@@ -327,7 +326,29 @@ INSERT INTO `project` (`id`, `file`, `text`, `sh`) VALUES
 (3, '', 'inLife癮生活網站設計製作及維運管理', 1),
 (4, '', '台電宣導動畫片製作', 1),
 (5, '', '香港商U3D Picowork 雲端作業系統UI/UX開發及宣傳影片製作', 1),
-(6, '', 'WILD 7 七金剛動漫畫製作 壹動畫', 1);
+(6, '', 'WILD 7 七金剛動漫畫製作 壹動畫', 1),
+(7, '', '澳洲牛肉協會宣導影片 澳洲牛肉協會', 1),
+(8, '', '真正的英雄(墨西哥獨立英雄)動畫影片製作', 1),
+(9, '', '米米(MiMi)繪本動畫影片製作', 1),
+(10, '', 'BULULU資策會輔導金影片開發計畫', 1),
+(11, '', '故宮博物院-陶瓷e-learning推展教材多媒體製作案', 1),
+(12, '', '農委會 e-learning推展教材多媒體制作案', 1),
+(13, '', '中國信託 e-learning教材製作案', 1),
+(14, '', '教育部六大網之 自然生態學習網建置案', 1),
+(15, '', '\r\n宏廣卡通公司-台北/泰國/蘇州廠電腦化作業建制規劃及人員訓練', 1),
+(16, '', '加拿大ToonBoom 專業動畫製作系統亞洲區訓練計畫', 1),
+(17, '', '台北環球電視台虛擬攝影棚建置架設', 1),
+(18, '', '東森新聞開台動畫及頻道包裝製作', 1),
+(19, '', '美國CHYRON Liberty影音剪輯系統建置及教學', 1),
+(20, '', '膽小狗英雄動畫片製作Courage the Cowardly Dog -Stretchfilms', 1),
+(21, '', '好奇猴喬治-電影版 環球影業 Curious George Feature Film -Universal', 1),
+(22, '', '小美人魚2 Little Mermaid 2 -Walt Disney', 1),
+(23, '', 'The Powerpuff Girls -Cartoon Network', 1),
+(24, '', '湯姆歷險記 Tom Sawyer -MGM', 1),
+(25, '', '歷險小恐龍系列 Land Before Time series -Universal', 1),
+(26, '', '雪地靈犬系列 Balto series -Universal', 1),
+(27, '', '泰山 Tarzan -Walt Disney', 1),
+(28, '', '迪士尼公主系列 Princes Series -Disney', 1);
 
 -- --------------------------------------------------------
 
@@ -368,9 +389,9 @@ CREATE TABLE `skill` (
 --
 
 INSERT INTO `skill` (`id`, `file`, `text`, `sh`) VALUES
-(1, '', '<p><strong>美術/設計/動畫/影音編輯</strong></p>\r\n<p>- Adobe PhotoShop</p>\r\n<p>- Adobe Illustrator</p>\r\n<p>- Adobe XD</p>\r\n<p>- ToonBoom Harmony</p>\r\n<p>- Open Toonz&nbsp;</p>\r\n<p>- Adobe Premiere&nbsp;</p>\r\n<p>- Adobe AfterEffects&nbsp;&nbsp;</p>', 1),
-(2, '', '<p><strong>網頁工程</strong></p>\r\n<p>- HTML / CSS3</p>\r\n<p>- DreamWeaver</p>\r\n<p>- Javascript / jQuery&nbsp;</p>\r\n<p>- PHP</p>\r\n<p>- mysql</p>', 1),
-(3, '', '<p><strong>辦公軟體及系統軟硬體整合</strong></p>\r\n<p>- 電腦組裝、維護</p>\r\n<p>- 區域有線/無線網路架設</p>\r\n<p>- Windows / Linux 系統、server安裝</p>\r\n<p>- Office: Word、PowerPoint、Excel</p>\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: -9px; top: -8px;\">\r\n<div class=\"gtx-trans-icon\">&nbsp;</div>\r\n</div>', 1);
+(1, '', '<p><span style=\"font-size: 14pt;\"><strong>美術/設計/動畫/影音編輯</strong></span></p>\r\n<p><span style=\"font-size: 14pt;\">- Adobe PhotoShop</span></p>\r\n<p><span style=\"font-size: 14pt;\">- Adobe Illustrator</span></p>\r\n<p><span style=\"font-size: 14pt;\">- Adobe XD</span></p>\r\n<p><span style=\"font-size: 14pt;\">- ToonBoom Harmony</span></p>\r\n<p><span style=\"font-size: 14pt;\">- Open Toonz&nbsp;</span></p>\r\n<p><span style=\"font-size: 14pt;\">- Adobe Premiere&nbsp;</span></p>\r\n<p><span style=\"font-size: 14pt;\">- Adobe AfterEffects&nbsp;&nbsp;</span></p>', 1),
+(2, '', '<p><span style=\"font-size: 14pt;\"><strong>網頁工程</strong></span></p>\r\n<p><span style=\"font-size: 14pt;\">- HTML / CSS3</span></p>\r\n<p><span style=\"font-size: 14pt;\">- DreamWeaver</span></p>\r\n<p><span style=\"font-size: 14pt;\">- Javascript / jQuery&nbsp;</span></p>\r\n<p><span style=\"font-size: 14pt;\">- PHP</span></p>\r\n<p><span style=\"font-size: 14pt;\">- mysql</span></p>', 1),
+(3, '', '<p><span style=\"font-size: 14pt;\"><strong>辦公軟體及系統軟硬體整合</strong></span></p>\r\n<p><span style=\"font-size: 14pt;\">- 電腦組裝、維護</span></p>\r\n<p><span style=\"font-size: 14pt;\">- 區域有線/無線網路架設</span></p>\r\n<p><span style=\"font-size: 14pt;\">- Windows / Linux 系統、server安裝</span></p>\r\n<p><span style=\"font-size: 14pt;\">- Office: Word、PowerPoint、Excel</span></p>', 1);
 
 -- --------------------------------------------------------
 
@@ -391,8 +412,8 @@ CREATE TABLE `title` (
 --
 
 INSERT INTO `title` (`id`, `file`, `title`, `text`, `sh`) VALUES
-(2, 'head.jpg', '123123', '個性開朗，工作態度認真負責、細心，自我要求高，熟悉團隊合作，樂於助人及擅於工作協調溝通，曾專職負責包括Disney、Warner Brother. Universal 等外籍客戶之製作技術溝通與進度協調等工作項目。', 1),
-(4, 'page-0003-1.jpg', 'ghfghfghf', 'gdfgdfgdfgdfghhhhh\r\n5556666333569', 0);
+(2, 'head.jpg', 'Felix Wang', '嗨! 我是菲力，個性開朗，工作態度認真負責、細心，自我要求高，熟悉團隊合作，樂於助人及擅於工作協調溝通，曾專職負責包括Disney、Warner Brother. Universal 等外籍客戶之製作技術溝通與進度協調等工作項目。', 1),
+(4, 'page-0003-1.jpg', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -410,7 +431,7 @@ CREATE TABLE `total` (
 --
 
 INSERT INTO `total` (`id`, `total`) VALUES
-(1, 258);
+(1, 259);
 
 --
 -- 已傾印資料表的索引
@@ -556,7 +577,7 @@ ALTER TABLE `doc`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `history`
@@ -598,7 +619,7 @@ ALTER TABLE `pic`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `project`
 --
 ALTER TABLE `project`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `school`

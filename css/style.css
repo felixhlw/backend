@@ -138,9 +138,10 @@ overflow:hidden;
   margin:auto; 
   margin-bottom: 20px;
   overflow:auto; 
-  border:#666 1px solid;"
+  border:rgb(165, 165, 165) 2px solid;
   border-radius: 10px;
   position:relative;
+
 }
 /* .frame::before{
   content:"";
