@@ -119,7 +119,7 @@ $(function(){
 
  var show ="#<?php echo $do ?>";
 /* alert(show); */
-  
+    
   $(show).removeClass("menu a").addClass("menushow");
  /*  $(show).siblings().removeClass("menushow").addClass("menu a"); */
 /*     let idx = $("menu a").get(do).index();

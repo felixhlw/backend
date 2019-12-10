@@ -7,13 +7,108 @@ body {
     font-family: var(--font-family-sans-serif), 'Microsoft Jhenghei';
 
 }
+#resume{
+
+    font-size: 16px;
+}
+
 #menu{
 height:800px;
 background: gray;
+border-radius: 15px 0 0 15px;
+padding-top: 20px;
+text-align: center;
 
 }
+#menu ul{
+font-size: 18px;
+}
+
+#title {
+    color: white;
+    margin: 5px;
+}
+
+.head{
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+  }
+  .descp{
+    color: white;
+    font-size: 14px;
+    font-weight: 100;
+    margin: 5px;
+}
+.sub li{
+    margin-top: 0px;
+    padding: 0px 0;
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    list-style:none
+
+}
+.sub a{
+    color: white;
+    display: block;
+    margin: 16px 0px;
+    padding: 4px 5px;
+    text-decoration: none;
+    border-radius: 10px;
+ /*    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);  */
+
+    
+   }
+  
+  .sub a:hover{
+    background: rgb(226, 226, 226);
+    color:#F00;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 2px rgb(255, 255, 255); 
+  }
+  .sub a:link{
+    color: gray;
+  }
+  .sub a:active{
+    color: gray;
+  }
+  
+  .menushow{
+    display: block;
+    margin: 20px 0;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: white !important;
+    text-decoration: none;
+    background: rgb(255, 0, 0) !important;
+    box-shadow: 0px 0px 5px 2px rgb(255, 255, 255) !important; 
+  }
+  .menushow:hover{
+    color:#FFF !important;
+  }
+.copy{
+    margin-top:50px;
+    margin-bottom:10px;
+    color:rgb(192, 190, 190)
+}
 #content{
+    height:800px;
     background: lightgray;
+    border-radius: 0 15px 15px 0;
+    overflow: hidden;
+
+}
+.show{
+    width:99%; 
+    height:95%; 
+    margin:auto; 
+    overflow:auto; 
 }
 
 .carousel-item{
@@ -50,6 +145,7 @@ background: gray;
 #resume, #footer{
 /*     display: none; */
 }
+
 
 @media (max-width:576px){
     .carousel-item{

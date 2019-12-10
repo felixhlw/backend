@@ -1,4 +1,5 @@
 
+
 <?php
 include_once "./base.php";
 //建立一個資料表專用的變數，後續需要使用到資料表名稱的地方都使用這個變數即可
@@ -8,7 +9,8 @@ include_once "./base.php";
 ?>
   
 
-<div class="frame">
+<div class="row h-100 ">
+  <div class="col-12 align-self-center"></div>
   <h1>自傳</h1>
 
     <?php
@@ -26,5 +28,6 @@ include_once "./base.php";
     <?php
     }
     ?>
+</div>
 </div>
 

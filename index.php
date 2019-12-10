@@ -10,25 +10,25 @@ include_once "./base.php";
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Primary Meta Tags -->
-    <title>東山咖啡</title>
-    <meta name="title" content="個人履歷資訊網">
-    <meta name="description" content="個人履歷資訊網">
+    <title>Felix個人履歷資訊網</title>
+    <meta name="title" content="Felix個人履歷資訊網">
+    <meta name="description" content="Felix個人履歷資訊網">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
-    <meta property="og:title" content="個人履歷資訊網">
-    <meta property="og:description" content="個人履歷資訊網">
+    <meta property="og:title" content="Felix個人履歷資訊網">
+    <meta property="og:description" content="Felix個人履歷資訊網">
     <meta property="og:image" content="./images/banner-image_14.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="">
-    <meta property="twitter:title" content="個人履歷資訊網">
-    <meta property="twitter:description" content="個人履歷資訊網">
+    <meta property="twitter:title" content="Felix個人履歷資訊網">
+    <meta property="twitter:description" content="Felix個人履歷資訊網">
     <meta property="twitter:image" content="./images/banner-image_14.jpg">
 
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+	<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/front.css">
@@ -78,32 +78,79 @@ include_once "./base.php";
     <!-- 這個container是必要的唷 -->
     <div class="container" id="resume">
         <div class="row" >
-            <div class="col-3 my-3" id="menu">
-                <div class="column">
+            <div class="col-3 my-3 " id="menu">
                     <div>
                         <?php
                         include "./front/title.php";
                         ?>
                     </div>
-                    <div>
-                        <a href="?do=info" id="info">個人資料</a>
-                        <a href="?do=cond" id="cond">求職條件</a>
-                        <a href="?do=skill" id="skill">技能</a>
-                        <a href="?do=history" id="history">經歷</a>
-                        <a href="?do=school" id="school">學歷</a>
-                        <a href="?do=project" id="project">參與專案</a>
-                        <a href="?do=gallery" id="gallery">作品集</a>
-                        <a href="?do=doc" id="doc">自傳</a>
+                    <div class="col-12">
+
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item ">
+                                <a class="nav-link text-white active" href="#">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link text-white active" href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#">
+                                    <i class="fab fa-line"></i>
+                                </a>
+                            </li>
+                        </ul>
+ 
+
+                    
+                    <!-- <div class="col-4"></div> -->
+                    <div class="col-12 align-self-center sub">
+                        <li>
+                            <a href="?do=info" id="info">個人簡介 / About Me</a>
+                        </li>
+                        <li>
+                            <a href="?do=cond" id="cond">求職條件 / Job & Position</a>
+                        </li>
+                        <li>
+                            <a href="?do=skill" id="skill">技能 / My Sill</a>
+                        </li>
+                        <li>
+                            <a href="?do=history" id="history">經歷 / Experience</a>
+                        </li>
+                        <li>
+                            <a href="?do=school" id="school">學歷 / Education</a>
+                        </li>
+                        <li>
+                            <a href="?do=project" id="project">參與專案 / Project</a>
+                        </li>
+                        <li>
+                            <a href="?do=gallery" id="gallery">作品集 / Gallery</a>
+                        </li>
+                        <li>
+                            <a href="?do=doc" id="doc">自傳 / Autobiography</a>
+                        </li>    
                     </div>
-                    <div></div>
-
-                </div>
-
+                    <!-- <div class="col-4"></div> -->
+                    </div>
+                    <div class="copy"> &copy; <script>
+                                document.write(new Date().getFullYear())
+                            </script> Felix Wang </div>
+               
             </div>
-                <div class="col-9 my-3" id="content">
+            <div class="col-9 my-3" id="content" >
+                <div class="container my-3 show" >
+                    <!-- <div class="row" id="show"></div> -->
             <?php
                 //利用網址傳值的方式來取得$_GET['do']的值，這個值代表我們要include進來的檔案
-                $do=(!empty($_GET['do']))?$_GET['do']:"title";
+                $do=(!empty($_GET['do']))?$_GET['do']:"info";
                 $type=(!empty($_GET['type']))?$_GET['type']:"video";
 
                 //我們將所有要include進來的後台功能檔案都放在 ./admin 目錄下，因此根據GET的值來組合include檔的完整路徑
@@ -117,7 +164,8 @@ include_once "./base.php";
                 }
                /*  echo $do */
             ?>    
-
+                   <!--  </div> -->
+                </div>
             </div>
         </div>
         
@@ -216,6 +264,12 @@ include_once "./base.php";
                 new WOW().init()
             });
         }) */
+        $(function(){
+
+var show ="#<?php echo $do ?>";
+/* alert(show); */
+ 
+ $(show).removeClass("sub a").addClass("menushow");
     </script>
 </body>
 

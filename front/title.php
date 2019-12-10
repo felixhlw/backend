@@ -5,7 +5,7 @@ include_once "./base.php";
  $useTable="title";
 
 ?>
-<div class="frame">
+<div>
     <?php
     //取出資料表的所有資料
     $rows=all($useTable,['sh'=>'1']);
@@ -13,13 +13,15 @@ include_once "./base.php";
     //以迴圈的方式逐筆列出資料
     foreach($rows as $r){
     ?>
-    <div>
-        <?=$r['title'];?>
+    <div id="title" >
+        <h6>
+            <?=$r['title'];?>
+        </h6>
     </div>
-    <div>
-        <img src="./img/<?=$r['file'];?>" style="width:auto;height:110px">
+    <div class="head" >
+        <img src="./img/<?=$r['file'];?>" style="width:auto;height:120px">
     </div>
-    <div>
+    <div class="descp" style="padding:5px;text-align:justify;">
         <?=$r['text'];?>
     </div>
     <?php
