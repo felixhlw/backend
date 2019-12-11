@@ -19,14 +19,14 @@ include_once "./base.php";
     <meta property="og:url" content="">
     <meta property="og:title" content="Felix個人履歷資訊網">
     <meta property="og:description" content="Felix個人履歷資訊網">
-    <meta property="og:image" content="./images/banner-image_14.jpg">
+    <meta property="og:image" content="">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="">
     <meta property="twitter:title" content="Felix個人履歷資訊網">
     <meta property="twitter:description" content="Felix個人履歷資訊網">
-    <meta property="twitter:image" content="./images/banner-image_14.jpg">
+    <meta property="twitter:image" content="">
 
 	<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="./css/all.min.css">
@@ -87,6 +87,7 @@ include_once "./base.php";
                         include "./front/title.php";
                         ?>
                     </div>
+                    
                     <div class="col-12">
 
                         <ul class="nav justify-content-center">
@@ -113,18 +114,19 @@ include_once "./base.php";
                         </ul>
  
 
-                    
-                    <!-- <div class="col-4"></div> -->
-                    <div class="col-12 align-self-center sub">
+                    </div>
+                    <div class="col-12 ">
+                        <div class=" justify-content-center sub">
 <?php
-                    $do=(!empty($_GET['do']))?$_GET['do']:"info";
-                    $main=all("menu",['parent'=>0,'sh'=>1]);
-						foreach ($main as $k => $m) {
+                       $do=(!empty($_GET['do']))?$_GET['do']:"info";
+                       $main=all("menu",['parent'=>0,'sh'=>1]);
+				    		foreach ($main as $k => $m) {
 
-                            echo "<li><a href='".$m['href']."' id='".explode("=",$m['href'])[1]."'>".$m['text']."</a></li>";
+                              echo "<li><a href='".$m['href']."' id='".explode("=",$m['href'])[1]."'>".$m['text']."</a></li>";
 
-                        }
+                            }
 ?>
+                    
  <!--                        <li>
                             <a href="?do=info" id="info">個人簡介 / About Me</a>
                         </li>
@@ -149,12 +151,15 @@ include_once "./base.php";
                         <li>
                             <a href="?do=doc" id="doc">自傳 / Autobiography</a>
                         </li>   -->  
+                        </div>
                     </div>
                     <!-- <div class="col-4"></div> -->
-                    </div>
-                    <div class="copy"> &copy; <script>
+                    <div class="row  ">
+                        <div class="col-12 admin   "> &copy; <script>
                                 document.write(new Date().getFullYear())
-                            </script> Felix Wang </div>
+                            </script>  |  登入管理
+                        </div>
+                    </div>
                
             </div>
             <div class="col-9 my-3" id="content" >
@@ -174,7 +179,7 @@ include_once "./base.php";
                 }else{
                   include "./front/title.php";
                 }
-               echo $do;
+               /* echo $do; */
             ?>    
                    <!--  </div> -->
                 </div>
@@ -192,7 +197,7 @@ include_once "./base.php";
         <!-- 用row做一個區塊內容 -->
         <div class="row coffee fadeInLeft wow">
             <div class="col-12 col-md-5 my-3">
-                <img src="./images/banner-image_10.jpg" class="w-100 h-100 object-fit">
+                <img src="" class="w-100 h-100 object-fit">
             </div>
             <div class="col-12 col-md-7 my-3 text-white align-self-center">
                 <h1>咖啡的好與壞</h1>
@@ -206,7 +211,7 @@ include_once "./base.php";
         <!-- 用row做一個區塊內容 -->
         <div class="row coffee fadeInRight wow">
             <div class="col-12 col-md-5 my-3">
-                <img src="./images/banner-image_17.jpg" class="w-100 h-100 object-fit">
+                <img src="" class="w-100 h-100 object-fit">
             </div>
             <div class="col-12 col-md-7 my-3 text-white align-self-center">
                 <h1>喝咖啡的好處</h1>
@@ -219,7 +224,7 @@ include_once "./base.php";
 
         <div class="row coffee fadeInLeft wow">
             <div class="col-12 col-md-5 my-3">
-                <img src="./images/banner-image_14.jpg" class="w-100 h-100 object-fit">
+                <img src="" class="w-100 h-100 object-fit">
             </div>
             <div class="col-12 col-md-7 my-3 text-white align-self-center">
                 <h1>喝咖啡的壞處</h1>

@@ -1,6 +1,6 @@
 
 body {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/banner-image_14.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url();
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -44,9 +44,12 @@ font-size: 18px;
     font-weight: 100;
     margin: 5px;
 }
+.sub{
+    height: 400px;
+}
 .sub li{
-    margin-top: 0px;
-    padding: 0px 0;
+    margin: auto;
+    padding: 0px 15px;
     font-size: 14px;
     color: white;
     text-align: left;
@@ -56,7 +59,7 @@ font-size: 18px;
 .sub a{
     color: white;
     display: block;
-    margin: 16px 0px;
+    margin: 16px auto;
     padding: 4px 5px;
     text-decoration: none;
     border-radius: 10px;
@@ -111,7 +114,7 @@ color: rgb(0, 247, 255);
     color:#FFF !important;
 }
 .bttn{
-    margin: 0;
+    margin-top: -10px;
     padding: 0;
 }
 .bttn li{
@@ -129,7 +132,7 @@ color: rgb(0, 247, 255);
     color: white;
     display: block;
     margin: 16px 5px 0 0;
-    padding: 4px 5px;
+    padding: 4px 10px;
     text-decoration: none;
     border-radius: 10px;
     background: rgb(160, 160, 160);
@@ -149,13 +152,13 @@ color: rgb(0, 247, 255);
 } */
 .bttn a:hover{
    /*  background: rgb(226, 226, 226); */
-    color:rgb(0, 225, 255);
+    color:rgb(255, 255, 255);
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0px 0px 2px 1px rgb(255, 255, 255), inset 0 0 2px white; 
 }
 .bttn a:active{
-color: rgb(0, 247, 255);
+color: rgb(0, 170, 255);
 }
 /* .bttn{
     display: inline-block;
@@ -168,9 +171,11 @@ color: rgb(0, 247, 255);
     background: rgb(0, 217, 255) !important;
 }  
 
-.copy{
-    margin-top:50px;
+.admin{
+    margin-top:0px;
     margin-bottom:10px;
+    padding:0px;
+    text-align: center;
     color:rgb(192, 190, 190)
 }
 #content{
@@ -205,8 +210,8 @@ color: rgb(0, 247, 255);
     object-position: center;
 }
 
-.coffee>div:first-child {
-    height: 350px;
+.video>div:first-child {
+    height: 200px;
 }
 
 #footer{
@@ -256,10 +261,10 @@ input:focus,button:focus
 }
 
 @media (min-width:768px){
-    .coffee:nth-child(odd)>div:first-child{
+    .video:nth-child(odd)>div:first-child{
         order:1;
     }
-    .coffee:nth-child(odd)>div:last-child{
+    .video:nth-child(odd)>div:last-child{
         order:0;
         text-align: right;
     }

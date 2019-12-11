@@ -9,7 +9,7 @@ include_once "./base.php";
 ?>
   
 
-<div class="row h-100 ">
+<div class="row h-100 pl-3 pr-4 ">
   <div class="col-12 align-self-center"></div>
   <h1>自傳</h1>
 
@@ -20,7 +20,7 @@ include_once "./base.php";
     //以迴圈的方式逐筆列出資料
     foreach($rows as $r){
     ?>
-    <div>
+    <div class="text-justify">
 
       <?=$r['text'];?>
     </div>

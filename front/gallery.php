@@ -11,7 +11,7 @@ include_once "./base.php";
  }
 /*  echo $type; */
  ?>
-<div>作品集 / Gallery</div>
+<h3> 作品集 / Gallery</h3>
 <div class="col-12 bttn" >
   <li>
     <a href="?do=gallery&type=video" class="bttnshow" id="video">動畫及影片</a>
@@ -28,8 +28,8 @@ include_once "./base.php";
 </div>
 
 
-<div class="show my-3">
-  <p class="t cent botli">作品集<?=$type;?></p>
+<div class="show my-3 pr-3">
+  <!-- <p class="t cent botli">作品集<?=$type;?></p> -->
  
         <?php
         
@@ -52,25 +52,34 @@ include_once "./base.php";
         //以迴圈的方式逐筆列出資料
         foreach($rows as $r){
         ?>
-  
-        <img src="./img/<?=$r['file'];?>" style="width:auto;height:90px">
-        <?=$r['title'];?>
-
-        <?=$r['text'];?>
-        <?=$r['link'];?>
+          <div class="row video">
+              <div class="col-12 col-md-6 my-1">
+                  <img src="./img/<?=$r['file'];?>" class="w-100 h-100 object-fit">
+              </div>
+              <div class="col-12 col-md-6 my-3 text-white align-self-center">
+                  <h6> <?=$r['title'];?> </h6>
+                  <p style="font-size: 14px">
+                    <?=$r['text'];?>
+                  </p>
+                  <p>
+                    <?=$r['link'];?>
+                  </p>
+              </div>
+          </div>  
 
         <?php
         }
  
           if(($p-1)>0){
-          echo "<a href='index.php?do=$useTable&type=$type&p=".($p-1)."' style='text-decoration:none'> < </a>";
+
+          echo "<p class='col-12'><a href='index.php?do=$useTable&type=$type&p=".($p-1)."' style='text-decoration:none'> < </a>";
           }
          for($i=1;$i<=$pages;$i++){
           $fontSize=($i==$p)?"24px":"16px";
           echo "<a href='index.php?do=$useTable&type=$type&p=$i' style='font-size:$fontSize;text-decoration:none'> ".$i." </a>";
           }
         if(($p+1)<=$pages){
-          echo "<a href='index.php?do=$useTable&type=$type&p=".($p+1)."' style='text-decoration:none'> > </a>";          
+          echo "<a href='index.php?do=$useTable&type=$type&p=".($p+1)."' style='text-decoration:none'> > </a></p>";          
         }
     ?>
 
@@ -96,16 +105,16 @@ include_once "./base.php";
         $(this).addClass("menushow"); */
           /* $("#content div").eq(0).siblings().hide(); */
           /* $("#content div").eq(0).show(); */
-          $(".bttn a").on("click", function(){
+//$(".bttn a").on("click", function(){
             /* console.log($(this).index()); */
-            $(this).css("background", "rgb(167, 241, 157)");
-            $(this).siblings().css("background", "lightgray");
+//            $(this).css("background", "rgb(167, 241, 157)");
+//            $(this).siblings().css("background", "lightgray");
             /*                 self=$(this).index();
             $(".frame").hide();
             $(".frame").eq(self).show(); */
-          })
+ //         })
                 
-    $(window).on('load', function () {
-    })   
+//    $(window).on('load', function () {
+//    })   
      /* }) */
  </script>
