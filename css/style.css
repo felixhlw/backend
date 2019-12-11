@@ -13,7 +13,7 @@ body{
 }
 #main{
   width:1280px;
-  height:850px;
+  height:900px;
   margin:auto;
   background: #ffffff;
 }
@@ -48,7 +48,7 @@ body{
 .flex {
   display: flex;
   align-items: stretch;
-  height: 810px;
+  height: 868px;
   margin: 0px;
   padding: 25px;
   background-color: #eaeaea;
@@ -253,6 +253,18 @@ table td{
 
 .just3 input[type="text"],input[type="date"], textarea {
   /* width:350px; */
+}
+
+.just4 {
+  margin:auto;
+  vertical-align: middle;
+  font-size: 18px;
+  font-weight: 600;
+  color: #69675c;
+  text-align: justify; 
+  text-justify:distribute-all-lines;
+  text-align-last:justify;
+
 }
 .close{
 /*   width: 30px;

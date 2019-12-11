@@ -1,4 +1,4 @@
-<?
+<?php
 include_once "./base.php";
 //建立一個資料表專用的變數，後續需要使用到資料表名稱的地方都使用這個變數即可
 //可以減少手打的錯誤，並且方便其他功能的延用
@@ -55,7 +55,7 @@ include_once "./base.php";
         ?>
       </tbody>
     </table>
-    <table style="margin-top:40px; width:70%;">
+    <table style="margin-top:40px; padding-left:25px;width:69%;">
       <tbody>
         <tr>
           <!--這裹帶入一個隱藏欄位用來存放資料表名稱，以利api識別要處理的目標資料表-->

@@ -9,19 +9,26 @@ include_once "./base.php";
  }else{
     $type="video";
  }
- 
 /*  echo $type; */
-
  ?>
-<div id="btns" >
-<a href="?do=gallery&type=video" ><input type="button" value="動畫及影片" class="btn" id="video"></a>
-<a href="?do=gallery&type=cartoon" ><input type="button" value="參與製作之卡通" class="btn" id="cartoon"></a>
-<a href="?do=gallery&type=art" ><input type="button" value="美術及平面設計"" class="btn" id="art"></a>
-<a href="?do=gallery&type=cording" ><input type="button" value="網站及程式設計" class="btn" id="cording"></a>
+<div>作品集 / Gallery</div>
+<div class="col-12 bttn" >
+  <li>
+    <a href="?do=gallery&type=video" class="bttnshow" id="video">動畫及影片</a>
+  </li>
+  <li>
+    <a href="?do=gallery&type=cartoon" id="cartoon">參與製作之卡通</a>
+  </li>
+  <li>
+    <a href="?do=gallery&type=art" id="art">美術及平面設計</a>
+  </li>
+  <li>
+    <a href="?do=gallery&type=cording" id="cording">網站及程式設計</a>
+  </li>
 </div>
 
 
-<div class="frame" style="overflow:auto">
+<div class="show my-3">
   <p class="t cent botli">作品集<?=$type;?></p>
  
         <?php
@@ -39,8 +46,6 @@ include_once "./base.php";
         // 下SQL查詢語法(LIMIT start,amount) 及 取出分頁資料
         $rows=all($useTable,['type'=>$type]," LIMIT $start,$div");
 
-
-
         //取出資料表的所有資料
 /*         $rows=all($useTable,['type'=>$type]);  */
 
@@ -48,11 +53,11 @@ include_once "./base.php";
         foreach($rows as $r){
         ?>
   
-            <img src="./img/<?=$r['file'];?>" style="width:auto;height:90px">
-    <?=$r['title'];?>
+        <img src="./img/<?=$r['file'];?>" style="width:auto;height:90px">
+        <?=$r['title'];?>
 
-<?=$r['text'];?>
-<?=$r['link'];?>
+        <?=$r['text'];?>
+        <?=$r['link'];?>
 
         <?php
         }
@@ -72,22 +77,26 @@ include_once "./base.php";
 </div>
 
 
-
-
 <script>
         /* $(function(){ */
-          var type = '<?php echo $type ?>';
+          var type = "#<?php echo $type ?>";
           /* console.log(type); */
 /*           $(".frame type").on("load", function(){
           $(".frame type").show();
           $(".frame type").siblings().hide(); */
-          $("#"+type).siblings().css("background", "lightgray");
-          $("#"+type).css("background", "rgb(167, 241, 157)");
-          
-
+/*           $(type).siblings().css("background", "red");
+          $(type).css("background", "rgb(167, 241, 157)"); */
+          /* $("#"+type).removeClass("bttn").addClass("bttnshow");   
+               */
+    /* alert(show);  */
+    console.log(type);
+    $(type).parent("li").siblings().find("a").removeClass("bttnshow"); 
+    $(type).addClass("bttnshow");
+/*    $(show).on("click",function(){
+        $(this).addClass("menushow"); */
           /* $("#content div").eq(0).siblings().hide(); */
           /* $("#content div").eq(0).show(); */
-          $(".btn").on("click", function(){
+          $(".bttn a").on("click", function(){
             /* console.log($(this).index()); */
             $(this).css("background", "rgb(167, 241, 157)");
             $(this).siblings().css("background", "lightgray");
@@ -96,5 +105,7 @@ include_once "./base.php";
             $(".frame").eq(self).show(); */
           })
                 
+    $(window).on('load', function () {
+    })   
      /* }) */
  </script>

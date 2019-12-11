@@ -43,7 +43,7 @@ include_once "./base.php";
         ?>
       </tbody>
     </table>
-    <table style="margin-top:40px; padding-left:85px;width:92%;">
+    <table style="margin-top:40px; padding-left:90px;width:91%;">
       <tbody >
         <tr>
           <!--這裹帶入一個隱藏欄位用來存放資料表名稱，以利api識別要處理的目標資料表-->

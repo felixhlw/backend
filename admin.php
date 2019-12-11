@@ -64,6 +64,7 @@ include_once "base.php";
           <a href="?do=gallery" id="gallery">作品資料管理</a>
           <a href="?do=doc" id="doc">自傳管理</a>
           <a href="?do=admin" id="admin">管理者帳號管理</a>
+          <a href="?do=menu" id="menu">前端選單管理</a>
           <a href="?do=total" id="total">進站總人數管理</a>
           <a href="?do=bottom" id="bottom">頁尾版權資料管理</a>
           </div>

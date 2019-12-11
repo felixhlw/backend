@@ -31,8 +31,11 @@ include_once "./base.php";
 	<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/front.css">
     <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/front.css">
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/wow.min.js"></script>
 
 </head>
 
@@ -113,7 +116,16 @@ include_once "./base.php";
                     
                     <!-- <div class="col-4"></div> -->
                     <div class="col-12 align-self-center sub">
-                        <li>
+<?php
+                    $do=(!empty($_GET['do']))?$_GET['do']:"info";
+                    $main=all("menu",['parent'=>0,'sh'=>1]);
+						foreach ($main as $k => $m) {
+
+                            echo "<li><a href='".$m['href']."' id='".explode("=",$m['href'])[1]."'>".$m['text']."</a></li>";
+
+                        }
+?>
+ <!--                        <li>
                             <a href="?do=info" id="info">個人簡介 / About Me</a>
                         </li>
                         <li>
@@ -136,7 +148,7 @@ include_once "./base.php";
                         </li>
                         <li>
                             <a href="?do=doc" id="doc">自傳 / Autobiography</a>
-                        </li>    
+                        </li>   -->  
                     </div>
                     <!-- <div class="col-4"></div> -->
                     </div>
@@ -146,7 +158,7 @@ include_once "./base.php";
                
             </div>
             <div class="col-9 my-3" id="content" >
-                <div class="container my-3 show" >
+                <div class="container my-3 " >
                     <!-- <div class="row" id="show"></div> -->
             <?php
                 //利用網址傳值的方式來取得$_GET['do']的值，這個值代表我們要include進來的檔案
@@ -162,7 +174,7 @@ include_once "./base.php";
                 }else{
                   include "./front/title.php";
                 }
-               /*  echo $do */
+               echo $do;
             ?>    
                    <!--  </div> -->
                 </div>
@@ -252,10 +264,9 @@ include_once "./base.php";
         </div>
     </div>
 
+</body>
 
-    <script src="./js/jquery-3.4.1.min.js"></script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/wow.min.js"></script>
+
     <script>
 /*         $(window).on('load', function () {
             $("#loading").fadeOut(2000, function () {
@@ -264,13 +275,17 @@ include_once "./base.php";
                 new WOW().init()
             });
         }) */
-        $(function(){
-
-var show ="#<?php echo $do ?>";
-/* alert(show); */
- 
- $(show).removeClass("sub a").addClass("menushow");
+    var show ="#<?php echo $do ?>";
+    /* alert(show);  */
+    console.log(show);
+    $(window).on('load', function () {
+    $(show).siblings().removeClass("menushow").addClass("sub a"); 
+    $(show).removeClass("sub a").addClass("menushow");
+/*    $(show).on("click",function(){
+        $(this).addClass("menushow"); */
+    })        
+/*     $(function(){
+    }) */
     </script>
-</body>
 
 </html>

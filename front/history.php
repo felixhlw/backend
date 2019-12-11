@@ -5,7 +5,8 @@ include_once "./base.php";
  $useTable="history";
 
 ?>
-<div>
+<div>經歷 / Experience</div>
+<div class="show my-3">
         <?php
         //取出資料表的所有資料
         $rows=all($useTable,['sh'=>'1']);
