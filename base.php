@@ -136,7 +136,7 @@ function save($table,$data){
 
   }
 
-  //echo $sql;
+  echo $sql;
   return $pdo->exec($sql);
 }
 
@@ -179,9 +179,7 @@ function q($sql){
 
 //頁面導向
 function to($path){
-  
-  header("location:".$path);
-
+header("location:".$path);
 }
 
 

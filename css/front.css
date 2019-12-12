@@ -44,8 +44,10 @@ font-size: 18px;
     font-weight: 100;
     margin: 5px;
 }
+/* 選單的高度 */
 .sub{
     height: 400px;
+    margin-left: -3px;
 }
 .sub li{
     margin: auto;
@@ -135,7 +137,7 @@ color: rgb(0, 247, 255);
     padding: 4px 10px;
     text-decoration: none;
     border-radius: 10px;
-    background: rgb(160, 160, 160);
+    background: rgb(170, 170, 170);
  /*    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);  */
 }
 
@@ -168,8 +170,41 @@ color: rgb(0, 170, 255);
   } */
 
 .bttnshow{
-    background: rgb(0, 217, 255) !important;
+    background: rgb(0, 153, 255) !important;
 }  
+
+.row a{
+    color: white;
+/*     display: block; */
+    
+    padding: 4px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+ /*    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);  */
+}
+
+.row a:link{
+    color: white;
+}
+
+/* .row a:hover{
+    background: rgb(226, 226, 226);
+    color:#F00;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 2px rgb(255, 255, 255); 
+} */
+.row a:hover{
+   /*  background: rgb(226, 226, 226); */
+    color:rgb(0, 225, 255);
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 1px rgb(255, 255, 255), inset 0 0 2px white; 
+}
+.row a:active{
+color: rgb(0, 247, 255);
+}
+
 
 .admin{
     margin-top:0px;
@@ -187,9 +222,11 @@ color: rgb(0, 170, 255);
 }
 .show{
     width:99%; 
-    height:600px; 
+    height:650px; 
     margin:auto; 
-    overflow:auto; 
+    margin-left: 0px;
+    /* padding: 0 !important; */
+    overflow:hidden; 
     /* align-items: center; */
 }
 
@@ -211,11 +248,14 @@ color: rgb(0, 170, 255);
 }
 
 .video>div:first-child {
-    height: 200px;
-}
+    height: 185px;}
 
 #footer{
+    position:absolute;
+    margin-left: -20px;  
     font-size: 1.5rem;
+    bottom: 20px;
+
 }
 
 #loading{

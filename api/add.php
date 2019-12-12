@@ -30,7 +30,14 @@ switch($table){
     }
   break;
   case "gallery":
-    if(!empty($_POST['type'])){
+    if(!empty($_POST['type']) && $_POST['type']=='video'){
+      $data["title"]=$_POST['title'];
+      $data["text"]=$_POST['text'];
+      $data["type"]=$_POST['type'];
+      $data["embed"]=$_POST['embed'];
+      $data["link"]=$_POST['link'];
+     }
+    elseif(!empty($_POST['type'])){
 /*     if(!empty($_POST['title']) && !empty($_POST['text'])){       */
         $data["title"]=$_POST['title'];
         $data["text"]=$_POST['text'];

@@ -22,7 +22,17 @@ $type=$_GET['type'];
         <td><textarea name="text" id="text" cols="250" rows="5" style="width:99%"></textarea></td>
     </tr>
     <tr>
-        <td>連&nbsp;&emsp;&nbsp;&emsp;&nbsp;結：</td>
+<?php
+if ($type=='video') {
+?>
+    <td>影 片 連 結：</td>
+    <td><textarea name="embed" id="embed" cols="250" rows="5" style="width:99%"></textarea></td>
+<?php
+}        
+?>
+    </tr>
+    <tr>
+        <td>網 站 連 結：</td>
         <td><textarea name="link" id="link" cols="250" rows="5" style="width:99%"></textarea></td>
 
     </tr>

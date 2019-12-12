@@ -37,7 +37,7 @@ include_once "base.php";
   <div id="main">
     <div class="top">
       <div class="head" style="text-align:center;width:70px;display:inline-block">
-        <a href="index.html"><img src="./img/head.jpg" alt="個人履歷資料網" title="個人履歷資料網"
+        <a href="index.php"><img src="./img/head.jpg" alt="個人履歷資料網" title="個人履歷資料網"
             style="width:70px;height:70px"></a>
       </div>
       <div style="display:inline-block;text-align: left">
@@ -46,7 +46,11 @@ include_once "base.php";
             style="fill:#ffffff; font-size: 36px;text-shadow: 2px 2px 5px #333">個人履歷管理後台</text>
         </svg>
       </div>
-      <div class="exit" onclick="document.cookie='user=';location.replace('?')"><i class="fas fa-sign-out-alt"></i> 管理登出</div>
+      <div class="exit" onclick="location.replace('./api/logout.php')"><i class="fas fa-sign-out-alt"></i> 管理登出</div>
+
+      
+
+
     </div>
     <div class="container">
       <div class="flex">

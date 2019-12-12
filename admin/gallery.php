@@ -84,7 +84,7 @@ include_once "./base.php";
           <td>
             <!--這裹使用素材提供的op()函式來載入更新圖片需要的表單檔案，
                 同時利用get機制帶入相關的資料id及資料表名稱等資訊-->
-            <input type="button" value="更新圖片" onclick="op('#cover','#cvr','./view/update_<?=$useTable;?>.php?id=<?=$r['id'];?>&table=<?=$useTable;?>&type=<?=$type;?>')" ></label>
+            <input type="button" value="更新圖片" onclick="op('#cover','#cvr','./view/update_<?=$useTable;?>.php?id=<?=$r['id'];?>&table=<?=$useTable;?>&useTable=<?=$useTable;?>&type=<?=$type;?>&p=<?=$p;?>')" ></label>
 
             <!--這裹帶入一個隱藏欄位用來存放每筆資料的id，以利識別-->
          <input type="hidden" name="id[]" value="<?=$r['id'];?>">

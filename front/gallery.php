@@ -11,7 +11,7 @@ include_once "./base.php";
  }
 /*  echo $type; */
  ?>
-<h3> 作品集 / Gallery</h3>
+<h3 style="font-weight: 600; color:#888"> 作品集 / Gallery</h3>
 <div class="col-12 bttn" >
   <li>
     <a href="?do=gallery&type=video" class="bttnshow" id="video">動畫及影片</a>
@@ -28,7 +28,7 @@ include_once "./base.php";
 </div>
 
 
-<div class="show my-3 pr-3">
+<div class="show my-2">
   <!-- <p class="t cent botli">作品集<?=$type;?></p> -->
  
         <?php
@@ -36,7 +36,7 @@ include_once "./base.php";
         // 先取得資料表中的總筆數(要注意是否有條件限制，比如顯示不顯示)
         $sum=nums($useTable,['type'=>$type]);
         // 決定每個頁面的筆數
-        $div=5;
+        $div=3;
         // 計算總頁數(無條件進位法)
         $pages=ceil($sum/$div);
         // 採用網址參數的方式來取得當前頁，預設為第一頁
@@ -52,35 +52,42 @@ include_once "./base.php";
         //以迴圈的方式逐筆列出資料
         foreach($rows as $r){
         ?>
-          <div class="row video">
-              <div class="col-12 col-md-6 my-1">
+          <div class="row video fadeInUp wow px-0 my-3 mx-1" style="padding:0px 5px;border-radius:8px;background:rgb(170, 170, 170);overflow:hidden">
+              <!-- 圖片區 -->            
+              <div class="col-12 col-md-5 my-0 p-0" >
                   <img src="./img/<?=$r['file'];?>" class="w-100 h-100 object-fit">
               </div>
-              <div class="col-12 col-md-6 my-3 text-white align-self-center">
+              <!-- 文字區 -->
+              <div class="col-12 col-md-7 mt-3 text-white align-self-center">
+                  <!-- 標題 -->
                   <h6> <?=$r['title'];?> </h6>
+                  <!-- 內文 -->
                   <p style="font-size: 14px">
                     <?=$r['text'];?>
                   </p>
+                  <!-- 連結 -->
                   <p>
-                    <?=$r['link'];?>
+                    <a href="<?=$r['link'];?>"><i class="fas" style="color: rgb(255, 255, 255);"></i> 相關網站連結 </a> 
                   </p>
               </div>
           </div>  
 
         <?php
         }
- 
+          echo "<div class='container-fluid ' id='footer'>";
+          echo "<div class='row justify-content-center align-items-center'>";
           if(($p-1)>0){
-
-          echo "<p class='col-12'><a href='index.php?do=$useTable&type=$type&p=".($p-1)."' style='text-decoration:none'> < </a>";
+          echo "<a href='index.php?do=$useTable&type=$type&p=".($p-1)."' style='text-decoration:none;color:#888' class='mx-2'> < </a>";
           }
          for($i=1;$i<=$pages;$i++){
           $fontSize=($i==$p)?"24px":"16px";
-          echo "<a href='index.php?do=$useTable&type=$type&p=$i' style='font-size:$fontSize;text-decoration:none'> ".$i." </a>";
+          echo "<a href='index.php?do=$useTable&type=$type&p=$i' style='font-size:$fontSize;text-decoration:none;color:#888' class='mx-2'> ".$i." </a>";
           }
         if(($p+1)<=$pages){
-          echo "<a href='index.php?do=$useTable&type=$type&p=".($p+1)."' style='text-decoration:none'> > </a></p>";          
+          echo "<a href='index.php?do=$useTable&type=$type&p=".($p+1)."' style='text-decoration:none;color:#888' class='mx-2'> > </a>";          
         }
+        echo "</div>";
+        echo "</div>";
     ?>
 
 </div>
@@ -105,14 +112,15 @@ include_once "./base.php";
         $(this).addClass("menushow"); */
           /* $("#content div").eq(0).siblings().hide(); */
           /* $("#content div").eq(0).show(); */
-//$(".bttn a").on("click", function(){
+    $(type).on("click", function(){
+      $(".video").addClass("fadeOut wow");
             /* console.log($(this).index()); */
 //            $(this).css("background", "rgb(167, 241, 157)");
 //            $(this).siblings().css("background", "lightgray");
             /*                 self=$(this).index();
             $(".frame").hide();
             $(".frame").eq(self).show(); */
- //         })
+    })
                 
 //    $(window).on('load', function () {
 //    })   
