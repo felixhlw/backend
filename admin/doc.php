@@ -23,6 +23,7 @@ include_once "./base.php";
     /* toolbar: "code", "styleselect" */
    
  /*    menubar: "file edit insert view format table tools help" */
+    forced_root_block : 'div'
     });
   </script>
 </head>

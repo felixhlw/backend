@@ -17,6 +17,7 @@ include_once "./base.php";
     branding: false,
     language: "zh_TW",
     plugins : "code advlist autolink link image media hr table lists insertdatetime toc image imagetools charmap emoticons media print preview",
+    forced_root_block : 'div'
     /* toolbar: "code", "styleselect" */
    
  /*    menubar: "file edit insert view format table tools help" */
