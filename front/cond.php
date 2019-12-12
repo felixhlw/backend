@@ -4,23 +4,24 @@ include_once "./base.php";
 //可以減少手打的錯誤，並且方便其他功能的延用
  $useTable="cond";
 
+ $rows=all($useTable,['sh'=>'1']);
+
+ //以迴圈的方式逐筆列出資料
 ?>
-
 <div>
-        <?php
-        //取出資料表的所有資料
-        $rows=all($useTable,['sh'=>'1']);
+ <h3 style="font-weight: 600; color:#888">求職條件 / Job & Position</h3>
+<div class="column justify-content-center">
+<?php
+ foreach($rows as $r){
+ ?>
+   <div class="col mt-4 py-1">
 
-        //以迴圈的方式逐筆列出資料
-        foreach($rows as $r){
-        ?>
-        <div>
+   <?=$r['text'];?>
+ </div>
+ 
+ <?php
+ }
+ ?>
+ </div>
 
-          <?=$r['text'];?>
-        </div>
-          
-        <?php
-        }
-        ?>
-  
-</div>
+<?php        

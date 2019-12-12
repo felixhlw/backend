@@ -9,15 +9,21 @@ include_once "./base.php";
         $rows=all($useTable,['sh'=>'1']);
 
         //以迴圈的方式逐筆列出資料
+?>
+<div>
+        <h3 style="font-weight: 600; color:#888">學歷 / Education</h3>
+  <div class="column justify-content-center">
+<?php
         foreach($rows as $r){
         ?>
+          <div class="col mt-4 py-1">
 
-<div>
-  <?=$r['text'];?></textarea>
-</div>
-    
+          <?=$r['text'];?>
+        </div>
+        
         <?php
         }
         ?>
- 
-</div>
+        </div>
+
+<?php        

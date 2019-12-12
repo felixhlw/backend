@@ -8,13 +8,19 @@ include_once "./base.php";
         <?php
         //取出資料表的所有資料
         $rows=all($useTable,['sh'=>'1']);
-
+        ?>
+        <div>
+                <h3 style="font-weight: 600; color:#888">技能 / My Sill</h3>
+                  <div class="row ">
+            <?php
         //以迴圈的方式逐筆列出資料
         foreach($rows as $r){
         ?>
-        <div style="display:inline-block">
+
+        <div class="col-4 mt-4 py-0">
         <?=$r['text'];?>
         </div>
+        
         <?php
         }
         ?>

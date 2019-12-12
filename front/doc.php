@@ -9,9 +9,9 @@ include_once "./base.php";
 ?>
   
 
+<h3 style="font-weight: 600; color:#888">自傳 / Autobiography</h3>
 <div class="row h-100 pl-3 pr-4 ">
   <div class="col-12 align-self-center"></div>
-  <h1>自傳</h1>
 
     <?php
     //取出資料表的所有資料
@@ -20,7 +20,7 @@ include_once "./base.php";
     //以迴圈的方式逐筆列出資料
     foreach($rows as $r){
     ?>
-    <div class="text-justify">
+    <div class="text-justify mt-3">
 
       <?=$r['text'];?>
     </div>

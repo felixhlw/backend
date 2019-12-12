@@ -52,7 +52,7 @@ include_once "./base.php";
         //以迴圈的方式逐筆列出資料
         foreach($rows as $r){
         ?>
-          <div class="row video fadeInUp wow px-0 my-3 mx-1" style="padding:0px 5px;border-radius:8px;background:rgb(170, 170, 170);overflow:hidden">
+          <div class="row video fadeInUp wow px-0 my-2 mx-0" style="padding:0px 1px;border-radius:8px;background:rgb(170, 170, 170);overflow:hidden">
               <!-- 圖片區 -->            
               <div class="col-12 col-md-5 my-0 p-0" >
                   <img src="./img/<?=$r['file'];?>" class="w-100 h-100 object-fit">
@@ -77,14 +77,14 @@ include_once "./base.php";
           echo "<div class='container-fluid ' id='footer'>";
           echo "<div class='row justify-content-center align-items-center'>";
           if(($p-1)>0){
-          echo "<a href='index.php?do=$useTable&type=$type&p=".($p-1)."' style='text-decoration:none;color:#888' class='mx-2'> < </a>";
+          echo "<a href='index.php?do=$useTable&type=$type&p=".($p-1)."' style='text-decoration:none;color:#888' class='mx-2'><i class='fas fa-caret-left'></i></a>";
           }
          for($i=1;$i<=$pages;$i++){
           $fontSize=($i==$p)?"24px":"16px";
-          echo "<a href='index.php?do=$useTable&type=$type&p=$i' style='font-size:$fontSize;text-decoration:none;color:#888' class='mx-2'> ".$i." </a>";
+          echo "<a href='index.php?do=$useTable&type=$type&p=$i' style='font-size:$fontSize;text-decoration:none;font-weight:600;color:#888' class='mx-2'> ".$i." </a>";
           }
         if(($p+1)<=$pages){
-          echo "<a href='index.php?do=$useTable&type=$type&p=".($p+1)."' style='text-decoration:none;color:#888' class='mx-2'> > </a>";          
+          echo "<a href='index.php?do=$useTable&type=$type&p=".($p+1)."' style='text-decoration:none;color:#888' class='mx-2'><i class='fas fa-caret-right'></i></a>";          
         }
         echo "</div>";
         echo "</div>";

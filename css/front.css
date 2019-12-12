@@ -117,6 +117,7 @@ color: rgb(0, 247, 255);
 }
 .bttn{
     margin-top: -10px;
+    margin-bottom: -10px;
     padding: 0;
 }
 .bttn li{
@@ -136,7 +137,7 @@ color: rgb(0, 247, 255);
     margin: 16px 5px 0 0;
     padding: 4px 10px;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 8px;
     background: rgb(170, 170, 170);
  /*    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);  */
 }
@@ -255,6 +256,7 @@ color: rgb(0, 247, 255);
     margin-left: -20px;  
     font-size: 1.5rem;
     bottom: 20px;
+    vertical-align: baseline;
 
 }
 
@@ -292,6 +294,109 @@ input:focus,button:focus
 {
 	box-shadow:#09C 0px 0px 3px .3px;
 } */
+.just3 {
+    margin:auto;
+    vertical-align: middle;
+    font-size: 18px;
+    font-weight: 600;
+    color: #69675c;
+  }
+  
+  .just3 td:nth-child(odd){
+    width:25% ;
+    text-align: justify; 
+    text-justify:distribute-all-lines;
+    text-align-last:justify;
+  
+  }
+  .just3 td:nth-child(even){
+    width:75% ;
+  }
+  
+/*   .just3 input[type="text"],input[type="date"], textarea {
+    /* width:350px; */
+  } */
+
+  .just3 input
+{
+	border:#999 1px solid;
+	border-radius:5px;
+	background:#EFEFEF;
+	padding:5px 10px;
+	font-weight: 600;
+	font-size: 16px;
+	margin:5px 0;
+	cursor: pointer;
+	outline: none;
+}
+.just3 input[type="date"]
+{
+	border:#999 1px solid;
+	border-radius:5px;
+	background:#EFEFEF;
+	padding:5px 10px;
+	font-weight: 600;
+	font-size: 16px;
+	margin:1px 0 1px 1px;
+	cursor: pointer;
+	outline: none;
+}
+.just3 input[type="file"]
+{
+	border:#999 1px solid;
+	border-radius:5px;
+	background:#EFEFEF;
+	padding:5px 10px;
+	font-weight: 600;
+	font-size: 20px;
+	margin:1px 0 1px 1px;
+	cursor: pointer;
+	outline: none;
+}
+
+.just3 button, input[type="submit"],input[type="reset"]
+{
+	border:#999 1px solid;
+	border-radius:5px;
+	background:#EFEFEF;
+	padding:5px 10px;
+	font-weight: 600;
+	font-size: 16px;
+	margin:10px 0;
+	cursor: pointer;
+	outline: none;
+}
+.just3 input:active,button:active
+{
+	background:#E6E6E6;
+}
+.just3 input[type=text],input[type=password]
+{
+	margin:2px ;
+}
+.just3 input:focus,button:focus
+{
+	box-shadow:#09C 0px 0px 3px .3px;
+}
+.just3 textarea{
+	margin:1px;
+
+}
+
+.box{
+    
+    height: 750px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+  }
+  .inside{
+    width: 100%;
+    
+    /* background: #ccc; */
+  }
 
 
 @media (max-width:576px){
