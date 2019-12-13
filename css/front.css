@@ -398,6 +398,38 @@ input:focus,button:focus
     /* background: #ccc; */
   }
 
+  .info a{
+    color: white;
+/*     display: block; */
+    background: rgb(255, 0, 0);
+    padding: 4px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+ /*    box-shadow: 0px 0px 2px 2px rgba(0,0,0,0.2);  */
+}
+
+.info a:link{
+    color: white;
+}
+
+/* .info a:hover{
+    background: rgb(226, 226, 226);
+    color:#F00;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 2px rgb(255, 255, 255); 
+} */
+.info a:hover{
+   /*  background: rgb(226, 226, 226); */
+    color:rgb(255, 255, 255);
+    font-weight: bold;
+    background: rgb(0, 162, 255);
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 1px rgb(255, 255, 255), inset 0 0 2px white; 
+}
+.info a:active{
+color: rgb(0, 247, 255);
+}
 
 @media (max-width:576px){
     .carousel-item{

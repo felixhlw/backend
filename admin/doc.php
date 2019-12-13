@@ -19,11 +19,20 @@ include_once "./base.php";
     selector:'textarea',
     branding: false,
     language: "zh_TW",
-    plugins : "code advlist autolink link image media hr table lists insertdatetime toc image imagetools charmap emoticons media print preview",
+    plugins : "code advlist autolink link image media hr table lists insertdatetime toc image imagetools charmap emoticons media print preview iconfonts",
     /* toolbar: "code", "styleselect" */
    
  /*    menubar: "file edit insert view format table tools help" */
-    forced_root_block : 'div'
+    forced_root_block : 'div',
+    iconfonts_selector: '.fa, .fab, .fal, .far, .fas, .glyphicon', // optional (default shown)
+
+    // To load the plugin from the tinymce/plugins directory...
+    /* plugins: 'iconfonts', */
+
+    // ...or to load the plugin from a CDN or other external URL
+/*     external_plugins: {
+      'iconfonts': './tinymce/js/tinymce/plugins/iconfonts/plugin.js'
+    } */
     });
   </script>
 </head>

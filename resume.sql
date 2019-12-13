@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2019-12-13 14:14:13
+-- 產生時間： 2019-12-13 15:28:35
 -- 伺服器版本： 10.4.6-MariaDB
 -- PHP 版本： 7.3.9
 
@@ -328,9 +328,9 @@ CREATE TABLE `skill` (
 --
 
 INSERT INTO `skill` (`id`, `file`, `text`, `sh`) VALUES
-(1, '', '<p><span style=\"font-size: 14pt;\"><strong>美術設計/動畫/影音編輯</strong></span></p>\r\n<div><span style=\"font-size: 14pt;\">- Adobe PhotoShop</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Adobe Illustrator</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Adobe XD</span></div>\r\n<div><span style=\"font-size: 14pt;\">- ToonBoom Harmony</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Open Toonz&nbsp;</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Adobe Premiere&nbsp;</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Adobe AfterEffects&nbsp;&nbsp;</span></div>', 1),
-(2, '', '<div><span style=\"font-size: 14pt;\"><strong>網頁工程</strong></span></div>\r\n<div>&nbsp;</div>\r\n<div><span style=\"font-size: 14pt;\">- HTML / CSS3</span></div>\r\n<div><span style=\"font-size: 14pt;\">- DreamWeaver</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Javascript / jQuery&nbsp;</span></div>\r\n<div><span style=\"font-size: 14pt;\">- PHP</span></div>\r\n<div><span style=\"font-size: 14pt;\">- mysql</span></div>', 1),
-(3, '', '<div><span style=\"font-size: 14pt;\"><strong>辦公軟體及系統整合</strong></span></div>\r\n<div>&nbsp;</div>\r\n<div><span style=\"font-size: 14pt;\">- 電腦組裝、維護</span></div>\r\n<div><span style=\"font-size: 14pt;\">- 區域有線/無線網路架設</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Windows / Linux </span></div>\r\n<div><span style=\"font-size: 14pt;\">&nbsp; 系統、server安裝</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Office: Word、</span></div>\r\n<div><span style=\"font-size: 14pt;\">- PowerPoint</span><span style=\"font-size: 14pt;\">、</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Excel</span></div>', 1);
+(1, '', '<p><span style=\"font-size: 14pt;\"><span style=\"font-size: 18.6667px;\"><strong><span style=\"color: #e03e2d;\"><i class=\"fas fa-palette\"></i> </span><span style=\"color: #11a958;\"><i class=\"fas fa-photo-video\"></i></span></strong></span><strong style=\"font-size: 14pt;\"> 美術設計/動畫/影音</strong></span></p>\r\n<div><span style=\"font-size: 14pt;\">- Adobe PhotoShop</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Adobe Illustrator</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Adobe XD</span></div>\r\n<div><span style=\"font-size: 14pt;\">- ToonBoom Harmony</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Open Toonz&nbsp;</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Adobe Premiere&nbsp;</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Adobe AfterEffects&nbsp;&nbsp;</span></div>', 1),
+(2, '', '<div><span style=\"font-size: 14pt;\"><strong><span style=\"color: #3598db;\"> <i class=\"fab fa-php\"></i> </span><span style=\"color: #e67e23;\"><i class=\"fab fa-html5\"></i></span><span style=\"color: #23a16f;\"> <i class=\"fab fa-css3-alt\"></i></span> UI/UX &amp; 網頁工程</strong></span></div>\r\n<div>&nbsp;</div>\r\n<div><span style=\"font-size: 14pt;\">- HTML / CSS3</span></div>\r\n<div><span style=\"font-size: 14pt;\">- DreamWeaver</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Javascript / jQuery&nbsp;</span></div>\r\n<div><span style=\"font-size: 14pt;\">- PHP</span></div>\r\n<div><span style=\"font-size: 14pt;\">- mysql</span></div>', 1),
+(3, '', '<div><span style=\"font-size: 14pt;\"><strong><span style=\"color: #3598db;\"><i class=\"fab fa-windows\"></i> </span><span style=\"color: #e67e23;\"><i class=\"fab fa-ubuntu\"></i> </span>辦公軟體及系統整合</strong></span></div>\r\n<div>&nbsp;</div>\r\n<div><span style=\"font-size: 14pt;\">- 電腦組裝、維護</span></div>\r\n<div><span style=\"font-size: 14pt;\">- 區域有線/無線網路架設</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Windows / Linux </span></div>\r\n<div><span style=\"font-size: 14pt;\">&nbsp; 系統、server安裝</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Office: Word、</span></div>\r\n<div><span style=\"font-size: 14pt;\">- PowerPoint</span><span style=\"font-size: 14pt;\">、</span></div>\r\n<div><span style=\"font-size: 14pt;\">- Excel</span></div>', 1);
 
 -- --------------------------------------------------------
 

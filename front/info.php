@@ -43,9 +43,10 @@ include_once "./base.php";
     </div>  
   </div>  
   </div>  
-
-  <a href="?do=doc" style="padding:8px 20px;background: red">我的自傳</a>
-  <a href="admin.php" style="padding:8px 15px;background: red">我的作品集</a>
+  <div class="mt-4 info">
+    <a href="?do=doc" style="padding:5px 25px;" class="mr-3">我的自傳</a>
+    <a href="?do=gallery" style="padding:5px 15px;">我的作品集</a>
+  </div>
 <!-- 技能的部分 -->
 <?php
   $useTable="skill";
@@ -64,7 +65,7 @@ include_once "./base.php";
         ?>
 
         <div class="col-4 mt-1 py-0">
-        <?=$r['text'];?>
+        </i><?=$r['text'];?>
         </div>
         
         <?php
