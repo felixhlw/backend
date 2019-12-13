@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2019 年 12 月 13 日 06:37
+-- 產生時間： 2019-12-13 12:00:53
 -- 伺服器版本： 10.4.6-MariaDB
--- PHP 版本： 7.1.32
+-- PHP 版本： 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -79,10 +79,10 @@ CREATE TABLE `cond` (
 
 INSERT INTO `cond` (`id`, `file`, `text`, `sh`) VALUES
 (1, '', '<div><strong>希望工作地點: </strong></div>\r\n<div>台北市、新北市</div>', 1),
-(2, '', '<div><strong>希望待遇:</strong></div>\r\n<div>&nbsp;</div>', 1),
-(3, '', '<div><strong>希望應徵職務:</strong></div>\r\n<div>前端工程師、美編人員、後製剪接人員</div>\r\n<div>&nbsp;</div>', 1),
-(4, '', '<div><strong>就業狀況(在職中或待業): </strong></div>\r\n<div>待業</div>\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: -8px; top: 48px;\">\r\n<div class=\"gtx-trans-icon\">&nbsp;</div>\r\n</div>', 1),
-(5, '', '<div><strong>可上班日: </strong></div>\r\n<div>立即</div>\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: -1px; top: 48px;\">\r\n<div class=\"gtx-trans-icon\">&nbsp;</div>\r\n</div>', 1);
+(2, '', '<div><strong>希望待遇:</strong></div>', 1),
+(3, '', '<div><strong>希望應徵職務:</strong></div>\r\n<div>前端工程師、美編人員、後製剪接人員</div>', 1),
+(4, '', '<div><strong>就業狀況(在職中或待業): </strong></div>\r\n<div>待業</div>\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: -8px; top: 48px;\">&nbsp;</div>', 1),
+(5, '', '<div><strong>可上班日: </strong></div>\r\n<div>立即</div>', 1);
 
 -- --------------------------------------------------------
 
@@ -102,7 +102,7 @@ CREATE TABLE `doc` (
 --
 
 INSERT INTO `doc` (`id`, `file`, `text`, `sh`) VALUES
-(5, '', '<p>我是王宏禮,在台北出生成長,專長是美術設計及影音製作,自幼便鍾情於美術繪畫,從國中開始便拜入名師門下習畫,後來就讀復興美工並以平面設計組第一名成績畢業,畢業後迫不及待想發揮所長,便直接進入社會就業,有幸進入台灣第一家成立的東方廣告股份有限公司,在職 2 年期間學習甚多,也充分體認到學識及眼界上的不足,於是便離職專心投身補習期許能考取大學,半年後順利考進輔大應用美術系,在學四年期間成績優異並持續保持與廣告公司的關係,並以接 case方式賺取生活開銷並累積相關的工作經驗。</p>\r\n<p>於大學求學期間專攻電腦動畫,當時乃主流電腦仍為 486/586 的 90 年代,校內擁有當時最先進的 SGI 工作站及 wavefront 3D 軟體,然而當時的動畫軟體操作起來,並無現今普遍具備之 fancy 介面,許多功能都需要以指令及參數方式執行,也因此接觸並習得相關C語言及script 語法的使用。畢業製作以 3D 電腦動畫呈現, 成果獲師長及業界好評,從此也順利踏入電腦影音相關工作,發揮所學與所長。</p>\r\n<p>隨著電腦技術進步，網路應用崛起，在多年職場歷程中，也往往出現除影音製作外的網站相關製作需求，多次參與並負責從前期企畫到完成上線的網站建置專案經歷，讓我體認到具備相關專業技術能力的重要性，期間除陸陸續續的自我學習之外，也進入職訓局開設的專班修習更專業且全面的相關技術，包括HTML5、CSS3、PHP、Javascript、JQuery、Ajax、Mysql等前、後端程式能力，同時也能結合本身所學，提供更廣泛的服務。</p>\r\n<p><strong>【我與家人】</strong> 父親為職業軍人退休,母親為家管,我排行第二,有一位兄長與一位妹妹,兄長任職於中央圖書館,妹妹從事汽車零件貿易業,妻子為專業保母,有一男一女 2 個念高中的小孩,平時彼此間皆能互相扶持與體諒,家人相處融洽。&nbsp;</p>\r\n<p><strong>【我與工作】</strong> 透過早年在東方廣告、聯線廣告的廣告美術設計及媒體操作工作經驗,從廣告中接觸到許多電腦動畫及特效,加上大學所學,便立志進入相關產業,歷經在大眾電腦從事動畫軟體教學、系統整合安裝及銷售支援經驗,隨後進入電視台從事專業影片製作,再到進入宏廣卡通動畫公司負責製作技術統籌及人員教育訓練及生產線規劃等,期間曾負責台北、大陸、泰國三地之 技術相關業務及負責美國迪士尼、華納、環球、MGM 米高梅、nickelodeon、Stretch Film、丹麥 A-Film 等公司之往來技術研發及配合業務以及國內的故宮 e-learning 學習網製 作案、教育部六大學習網之自然生態網規畫製作等大型專案,一路走來皆與同事相處融洽並 多得貴人相助,得以累積豐富經驗及能力,也希望能在往後的職場生涯中繼續貢獻所長。</p>', 1);
+(5, '', '<p>我是王宏禮,在台北出生成長,專長是<strong>美術設計</strong>及<strong>影音製作</strong>,自幼便鍾情於美術繪畫,從國中開始便拜入名師門下習畫,後來就讀<strong>復興美工</strong> <img src=\"img/logo/fhvsartlogo.png\" alt=\"\" width=\"175\" height=\"58\" /> 並以平面設計組第一名成績畢業,畢業後迫不及待想發揮所長,便直接進入社會就業,有幸進入台灣第一家成立的<strong>東方廣告股份有限公司</strong> <img src=\"img/estern.png\" alt=\"\" width=\"117\" height=\"49\" /> 在職 2 年期間學習甚多,也充分體認到學識及眼界上的不足,於是便離職專心投身補習期許能考取大學,半年後順利考進<strong>輔大應用美術系&nbsp;&nbsp;<img src=\"img/logo/Fu_Jen_Catholic_University_Seal.svg.png\" alt=\"\" width=\"65\" height=\"72\" /></strong>&nbsp;<img src=\"img/logo/logo.png\" alt=\"\" width=\"210\" height=\"54\" />&nbsp;在學四年期間成績優異並持續保持與廣告公司的關係,並以接 case方式賺取生活開銷並累積相關的工作經驗。</p>\r\n<p>於大學求學期間專攻電腦動畫,當時乃主流電腦仍為 486/586 的 90 年代,校內擁有當時最先進的 SGI 工作站及 wavefront 3D 軟體,然而當時的動畫軟體操作起來,並無現今普遍具備之 fancy 介面,許多功能都需要以指令及參數方式執行,也因此接觸並習得相關C語言及script 語法的使用。畢業製作以 3D 電腦動畫呈現, 成果獲師長及業界好評,從此也順利踏入電腦影音相關工作,發揮所學與所長。</p>\r\n<p>隨著電腦技術進步，網路應用崛起，在多年職場歷程中，也往往出現除影音製作外的網站相關製作需求，多次參與並負責從前期企畫到完成上線的網站建置專案經歷，讓我體認到具備相關專業技術能力的重要性，期間除陸陸續續的自我學習之外，也進入職訓局開設的專班修習更專業且全面的相關技術，包括<strong>HTML5、CSS3、PHP、Javascript、JQuery、Ajax、Mysql</strong>等前、後端程式能力，同時也能結合本身所學，提供更廣泛的服務。</p>\r\n<p><strong>【我與家人】</strong> 父親為職業軍人退休,母親為家管,我排行第二,有一位兄長與一位妹妹,兄長任職於中央圖書館,妹妹從事汽車零件貿易業,妻子為專業保母,有一男一女 2 個念高中的小孩,平時彼此間皆能互相扶持與體諒,家人相處融洽。&nbsp;</p>\r\n<p><strong>【我與工作】</strong> 透過早年在東方廣告、聯線廣告的廣告美術設計及媒體操作工作經驗,從廣告中接觸到許多電腦動畫及特效,加上大學所學,便立志進入相關產業,歷經在大眾電腦從事動畫軟體教學、系統整合安裝及銷售支援經驗,隨後進入電視台從事專業影片製作,再到進入宏廣卡通動畫公司負責製作技術統籌及人員教育訓練及生產線規劃等,期間曾負責台北、大陸、泰國三地之 技術相關業務及負責美國迪士尼、華納、環球、MGM 米高梅、nickelodeon、Stretch Film、丹麥 A-Film 等公司之往來技術研發及配合業務以及國內的故宮 e-learning 學習網製 作案、教育部六大學習網之自然生態網規畫製作等大型專案,一路走來皆與同事相處融洽並 多得貴人相助,得以累積豐富經驗及能力,也希望能在往後的職場生涯中繼續貢獻所長。</p>', 1);
 
 -- --------------------------------------------------------
 
@@ -181,11 +181,11 @@ CREATE TABLE `history` (
 --
 
 INSERT INTO `history` (`id`, `file`, `text`, `sh`) VALUES
-(1, '', '<h5><strong>88 studio／同鈊科技, Chief of Technical Officer</strong></h5>\r\n<p>Oct 2006 ~ Jan 2019</p>\r\n<p>工作說明: 美術設計及影片後製統籌製作、網站維護、電腦設備器材採購及管理維護、專案資源分 配及進度管理、客服聯繫溝通</p>\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: -6px; top: 50.7188px;\">\r\n<div class=\"gtx-trans-icon\">&nbsp;</div>\r\n</div>', 1),
-(2, '', '<h5><strong>Wang Film ／宏廣卡通, Technical Supervisor</strong></h5>\r\n<p>Jun 1999 ~ Oct 2006</p>\r\n<p>工作說明: 動畫系統軟硬體安裝維護、集團網路建構規劃、設備採購規格制訂、生產製程技術研發 及管理協調、軟體操作教育訓練、海外生產線規劃及相關教育訓練、美術設計及影片後製統籌製 作、與國外片廠人員聯繫溝通</p>\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: 6px; top: 50.7188px;\">\r\n<div class=\"gtx-trans-icon\">&nbsp;</div>\r\n</div>', 1),
-(3, '', '<h5><strong>Anitime tech／藝動網科技 , 技術部經理/IT Manager</strong></h5>\r\n<p>&nbsp;Jan 2001 ~ Dec 2005</p>\r\n<p>工作說明: 在宏廣集團同時兼任此職務，負責公司網路及系統設備維護管理、專案規畫及進度管理</p>\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: 10px; top: -0.28125px;\">\r\n<div class=\"gtx-trans-icon\">&nbsp;</div>\r\n</div>', 1),
+(1, '', '<h5><strong>88studio／同鈊科技, Chief of Technical Officer</strong></h5>\r\n<div>Oct 2006 ~ Jan 2009</div>\r\n<div>工作說明: 美術設計及影片後製統籌製作、網站維護、電腦及設備器材採購及管理/維護、專案資源分配及進度管理、客戶服務</div>', 1),
+(2, '', '<h5><strong>Wang Film ／宏廣卡通, Technical Supervisor</strong></h5>\r\n<div>Jun 1999 ~ Oct 2006</div>\r\n<div>工作說明: 動畫系統軟硬體安裝維護、集團網路建構規劃、設備採購規格制訂、生產製程技術研發及管理協調、軟體操作教育訓練、海外生產線規劃及相關教育訓練、美術設計及影片後製統籌製 作、與國外片廠人員聯繫溝通</div>', 1),
+(3, '', '<h5><strong>Anitime tech／藝動網科技 , 技術部經理/IT Manager</strong></h5>\r\n<div>&nbsp;Jan 2001 ~ Dec 2005</div>\r\n<div>工作說明: 在宏廣集團同時兼任此職務，負責公司網路及系統設備維護管理、專案規畫及進度管理</div>\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: 10px; top: -0.28125px;\">\r\n<div class=\"gtx-trans-icon\">&nbsp;</div>\r\n</div>', 1),
 (4, '', '<h5><strong>FIC Computer Inc／大眾電腦集團, Assistant Manager</strong></h5>\r\n<p>Dec 1993 ~ Apr 1995,&nbsp; Jan 1997 ~ Dec 1999<br />工作說明: 與國外原廠聯繫,取得最新資訊,軟硬體教學及展示,協助業務推廣工作,系統整合安 裝及客服處理</p>', 1),
-(5, '', '<h5><strong>ETTV／東森電視, 新聞部動畫組長</strong></h5>\r\n<p>&nbsp;Jun 1995 ~ Dec 1996</p>\r\n<p>工作說明: 新聞節目片頭、新聞圖標/圖卡及頻道節目宣傳影片製作及人員分工管理</p>\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: -4px; top: -0.28125px;\">\r\n<div class=\"gtx-trans-icon\">&nbsp;</div>\r\n</div>', 1),
+(5, '', '<h5><strong>ETTV／東森電視, 新聞部動畫組長</strong></h5>\r\n<div>&nbsp;Jun 1995 ~ Dec 1996</div>\r\n<div>工作說明: 新聞節目片頭、新聞圖標/圖卡及頻道節目宣傳影片製作及人員分工管理</div>\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: -4px; top: -0.28125px;\">\r\n<div class=\"gtx-trans-icon\">&nbsp;</div>\r\n</div>', 1),
 (6, '', '<h5><strong>東方廣告股份有限公司／ 資深設計</strong></h5>\r\n<p>Jun 1987 ~&nbsp; Dec 1989<br />工作說明: 廣告稿設計製作、插畫、Logo、CIS設計、CF腳本繪製</p>\r\n<div id=\"gtx-trans\" style=\"position: absolute; left: 4px; top: 50.7188px;\">\r\n<div class=\"gtx-trans-icon\">&nbsp;</div>\r\n</div>', 1);
 
 -- --------------------------------------------------------
@@ -199,9 +199,9 @@ CREATE TABLE `info` (
   `file` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `name` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `birthday` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `tel` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `addr` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tel` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `addr` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `intro` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `sh` int(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -211,7 +211,7 @@ CREATE TABLE `info` (
 --
 
 INSERT INTO `info` (`id`, `file`, `name`, `birthday`, `tel`, `addr`, `email`, `intro`, `sh`) VALUES
-(3, '02B03.jpg', '王宏禮 Felix Wang', '2019-12-20', '0932281027', '台北市', 'felixhlw@gmail.com', '個性開朗，認真負責及細心，自我要求高，熟悉團隊合作，樂於助人及擅於工作協調溝通，曾專職負責包括Disney、Warner Brother. Universal 等客戶之製作技術溝通與進度協調等工作項目。本身所學具備高度專業美術敏感度及執行力，在美術編輯、設計及電腦動畫產業超過25年工作經驗，工作項目包括美術設計、繪畫、插畫及動畫影片製作、後製特效製作及影片剪輯、電腦系統規劃、架設及管理、人員教育訓練、專案規劃及管理等。', 1),
+(3, '02B03.jpg', '王宏禮 Felix Wang', '2019-12-20', '0932281027', '台北市 TW', 'felixhlw@gmail.com', '個性開朗及溫和有禮，認真負責及細心，自我要求高，熟悉團隊合作，樂於助人及擅於工作協調溝通，曾專職負責包括Disney、Warner Brother. Universal 等客戶之製作技術溝通與進度協調等工作項目。本身所學具備高度專業美術敏感度及執行力，在美術編輯、設計及電腦動畫產業超過25年工作經驗，工作項目包括美術設計、繪畫、插畫及動畫影片製作、後製特效製作及影片剪輯、電腦系統規劃、架設及管理、人員教育訓練、專案規劃及管理等。', 1),
 (6, '6204cc32-6a0f-4fb5-b0ba-7b5395ad570f.png', '', '', '', '', '', '', 0);
 
 -- --------------------------------------------------------
@@ -492,7 +492,7 @@ ALTER TABLE `gallery`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `history`
 --
 ALTER TABLE `history`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `info`

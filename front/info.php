@@ -44,8 +44,9 @@ include_once "./base.php";
   </div>  
   </div>  
 
-
-
+  <a href="?do=doc" style="padding:8px 20px;background: red">我的自傳</a>
+  <a href="admin.php" style="padding:8px 15px;background: red">我的作品集</a>
+<!-- 技能的部分 -->
 <?php
   $useTable="skill";
 ?>

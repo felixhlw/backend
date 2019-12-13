@@ -20,7 +20,7 @@ include_once "./base.php";
         <div class="mt-4 mr-0 pr-1">
         <i class="fas fa-graduation-cap"></i>
         </div>
-        <div class="mt-4 align-self-start">
+        <div class="mt-4" style="width: 96%">
           <?=$r['text'];?>
         </div>
     </div>
