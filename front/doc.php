@@ -10,8 +10,9 @@ include_once "./base.php";
   
 
 <h3 style="font-weight: 600; color:#888">自傳 / Autobiography</h3>
-<div class="row h-100 pl-3 pr-4 ">
-  <div class="col-12 align-self-center"></div>
+<div class="show">
+<div class="row h-100 pl-3 py-3 pr-4 " style="overflow: auto">
+  <div class="col-12 "></div>
 
     <?php
     //取出資料表的所有資料

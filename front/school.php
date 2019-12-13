@@ -11,19 +11,23 @@ include_once "./base.php";
         //以迴圈的方式逐筆列出資料
 ?>
 <div>
-        <h3 style="font-weight: 600; color:#888">學歷 / Education</h3>
-  <div class="column justify-content-center">
+ <h3 style="font-weight: 600; color:#888">學歷 / Education</h3>
+<div class="column py-3">
 <?php
-        foreach($rows as $r){
-        ?>
-          <div class="col mt-4 py-1">
-
+ foreach($rows as $r){
+ ?>
+    <div class="row  no-gutters">
+        <div class="mt-4 mr-0 pr-1">
+        <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="mt-4 align-self-start">
           <?=$r['text'];?>
         </div>
-        
-        <?php
-        }
-        ?>
-        </div>
+    </div>
+ <?php
+ }
+ ?>
+ </div>
+ </div>
 
-<?php        
+       

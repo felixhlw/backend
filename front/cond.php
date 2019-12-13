@@ -10,15 +10,18 @@ include_once "./base.php";
 ?>
 <div>
  <h3 style="font-weight: 600; color:#888">求職條件 / Job & Position</h3>
-<div class="column justify-content-center">
+<div class="column py-3">
 <?php
  foreach($rows as $r){
  ?>
-   <div class="col mt-4 py-1">
-
-   <?=$r['text'];?>
- </div>
- 
+    <div class="row  no-gutters">
+        <div class="mt-4 mr-0 pr-1">
+        <i class="fas fa-edit"></i>
+        </div>
+        <div class="mt-4 align-self-start">
+          <?=$r['text'];?>
+        </div>
+    </div>
  <?php
  }
  ?>

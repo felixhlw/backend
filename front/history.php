@@ -23,20 +23,23 @@ include_once "./base.php";
          //以迴圈的方式逐筆列出資料
          ?>
  <div>
-   <h3 style="font-weight: 600; color:#888">經歷 / Experience</h3>
-   <div class="column justify-content-center">
+   <h3 style="font-weight: 600; color:#888;">經歷 / Experience</h3>
+   <div class="column h-100 w-100 py-3">
+<?php
+ foreach($rows as $r){
+ ?>
+    <div class="row mt-4 no-gutters">
+        <div class="w-10 mr-0 pr-1">
+        <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="text-justify" style="width: 96%">
+          <?=$r['text'];?>
+        </div>
+    </div>
  <?php
-         foreach($rows as $r){
-         ?>
-           <div class="col mt-4 py-0">
- 
-           <?=$r['text'];?>
-         </div>
-         
-         <?php
-         }
-         ?>
-         </div>
+ }
+ ?>
+ </div>
  
  <?php        
            echo "<div class='container-fluid ' id='footer'>";

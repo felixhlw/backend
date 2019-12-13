@@ -9,14 +9,14 @@ include_once "./base.php";
         $r=find($useTable,['sh'=>'1']);
 
         ?> 
- <div class="row mr-2">
+ <div class="row px-0 mr-0">
     <div class="col-12 col-md-5 order-1" style="height:280px;overflow:hidden">
 
       <img src="./img/<?=$r['file'];?>" class="w-100 h-100 object-fit" style="height:280px;border-radius:15px;">
     </div>
   
 
-  <div class="col-12 col-md-7">
+  <div class="col-12 col-md-7  mr-0 text-justify">
   <h3 style="font-weight: 600; color:#888">
 
       <?=$r['name'];?>
@@ -28,15 +28,22 @@ include_once "./base.php";
     <div>
       <!-- <?=$r['birthday'];?> -->
 
-      <?=$r['tel'];?>            
-
-      <?=$r['addr'];?>
-
-      <?=$r['email'];?>
+      <div class="row pt-2 mx-0 px-0 justify-content-">
+        <div class="col mx-0 px-0 mr-3">
+          <i class="fas fa-phone-alt"></i> <?=$r['tel'];?>            
+        </div>
+        <div class="col mx-0 px-0 mr-2">
+         <i class="fas fa-map-marker-alt"></i> <?=$r['addr'];?>
+        </div>
+        <div class="col-5 mx-0 px-0">
+        <i class="fas fa-envelope"></i> <?=$r['email'];?>
+        </div>
+      </div>
 
     </div>  
   </div>  
   </div>  
+
 
 
 <?php
