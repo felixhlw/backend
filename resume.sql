@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2019-12-13 15:28:35
+-- 產生時間： 2019 年 12 月 14 日 10:45
 -- 伺服器版本： 10.4.6-MariaDB
--- PHP 版本： 7.3.9
+-- PHP 版本： 7.1.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -102,7 +102,7 @@ CREATE TABLE `doc` (
 --
 
 INSERT INTO `doc` (`id`, `file`, `text`, `sh`) VALUES
-(5, '', '<p>我是王宏禮,在台北出生成長,專長是<strong>美術設計</strong>及<strong>影音製作</strong>,自幼便鍾情於美術繪畫,從國中開始便拜入名師門下習畫,後來就讀<strong>復興美工</strong> <img src=\"img/logo/fhvsartlogo.png\" alt=\"\" width=\"175\" height=\"58\" /> 並以平面設計組第一名成績畢業,畢業後迫不及待想發揮所長,便直接進入社會就業,有幸進入台灣第一家成立的<strong>東方廣告股份有限公司</strong> <img src=\"img/estern.png\" alt=\"\" width=\"105\" height=\"44\" /> 在職 2 年期間學習甚多,也充分體認到學識及眼界上的不足,於是便離職專心投身補習期許能考取大學,半年後順利考進<strong>輔大應用美術系&nbsp;&nbsp;<img src=\"img/logo/Fu_Jen_Catholic_University_Seal.svg.png\" alt=\"\" width=\"49\" height=\"54\" /></strong>&nbsp;<img src=\"img/logo/logo.png\" alt=\"\" width=\"198\" height=\"50\" />&nbsp;在學四年期間成績優異並持續保持與廣告公司的關係,並以接 case方式賺取生活開銷並累積相關的工作經驗。</p>\r\n<p>於大學求學期間專攻電腦動畫,當時乃主流電腦仍為 486/586 的 90 年代,校內擁有當時最先進的 SGI 工作站及 wavefront 3D 軟體,然而當時的動畫軟體操作起來,並無現今普遍具備之 fancy 介面,許多功能都需要以指令及參數方式執行,也因此接觸並習得相關C語言及script 語法的使用。畢業製作以 3D 電腦動畫呈現, 成果獲師長及業界好評,從此也順利踏入電腦影音相關工作,發揮所學與所長。</p>\r\n<p>隨著電腦技術進步，網路應用崛起，在多年職場歷程中，也往往出現除影音製作外的網站相關製作需求，多次參與並負責從前期企畫到完成上線的網站建置專案經歷，讓我體認到具備相關專業技術能力的重要性，期間除陸陸續續的自我學習之外，也進入職訓局開設的專班修習更專業且全面的相關技術 <img src=\"img/logo/html5.png\" alt=\"\" width=\"162\" height=\"59\" />包括<strong>HTML5、CSS3、PHP、Javascript、JQuery、Ajax、Mysql</strong>等前、後端程式能力，同時也能結合本身所學，提供更廣泛的服務。</p>\r\n<p><strong>【我與家人】</strong> 父親為職業軍人退休,母親為家管,我排行第二,有一位兄長與一位妹妹,兄長任職於中央圖書館,妹妹從事汽車零件貿易業,妻子為專業保母,有一男一女 2 個念高中的小孩,平時彼此間皆能互相扶持與體諒,家人相處融洽。&nbsp;</p>\r\n<p><strong>【我與工作】</strong> 透過早年在東方廣告、聯線廣告的廣告美術設計及媒體操作工作經驗,從廣告中接觸到許多電腦動畫及特效,加上大學所學,便立志進入相關產業,歷經在大眾電腦從事動畫軟體教學、系統整合安裝及銷售支援經驗,隨後進入電視台從事專業影片製作,再到進入宏廣卡通動畫公司負責製作技術統籌及人員教育訓練及生產線規劃等,期間曾負責台北、大陸、泰國三地之 技術相關業務及負責美國迪士尼、華納、環球、MGM 米高梅、nickelodeon、Stretch Film、丹麥 A-Film 等公司之往來技術研發及配合業務以及國內的故宮 e-learning 學習網製 作案、教育部六大學習網之自然生態網規畫製作等大型專案,一路走來皆與同事相處融洽並 多得貴人相助,得以累積豐富經驗及能力,也希望能在往後的職場生涯中繼續貢獻所長。</p>', 1);
+(5, '', '<div>我是王宏禮,在台北出生成長,專長是<strong>美術設計</strong>及<strong>影音製作</strong>,自幼便鍾情於美術繪畫,從國中開始便拜入名師門下習畫,後來就讀<strong>復興美工</strong> <img style=\"float: left; margin: 0 15px;\" src=\"img/logo/fhvsartlogo.png\" alt=\"\" width=\"209\" height=\"69\"> 並以平面設計組第一名成績畢業,畢業後迫不及待想發揮所長,便直接進入社會就業,有幸進入台灣第一家<img style=\"float: right; margin: 0 15px;\" src=\"img/estern.png\" alt=\"\" width=\"71\" height=\"30\"> 成立的<strong>東方廣告股份有限公司</strong> 在職 2 年期間學習甚多,也充分體認到學識及眼界上的不足,於是便離職專心投身補習期許能考取大學,半年後順利考進<strong>輔大應用美術系</strong>，在學四年期間成績優異並持續保持與廣告公司的關係,並以接 case方式賺取生活開銷並累積相關的工作經驗。</div>\r\n<div>\r\n<p>&nbsp; <br>於大學求學期間專攻電腦動畫,當時乃主流電腦仍為 486/586 的 90 年代,校內擁有當時最先進的 SGI 工作站<img style=\"float: left; margin: 5px 0 0 15px;\" src=\"img/logo/Fu_Jen_Catholic_University_Seal.svg.png\" alt=\"\" width=\"50\" height=\"55\"><img style=\"float: left; margin: 5px 15 0 0 px;\" src=\"img/logo/logo.png\" alt=\"\" width=\"218\" height=\"55\">及 wavefront 3D 軟體,然而當時的動畫軟體操作起來,並無現今普遍具備之 fancy 介面,許多功能都需要以指令及參數方式執行,也因此接觸並習得相關C語言及script 語法的使用。畢業製作以 3D 電腦動畫呈現, 成果獲師長及業界好評,從此也順利踏入電腦影音相關工作,發揮所學與所長。</p>\r\n<p>隨著電腦技術進步，網路應用崛起，在多年職場歷程中，也往往出現除影音製作外的網站相關製作需求，多次參與並負責從前期企畫到完成上線的網站建置專案經歷，讓我體認到具備相關專業技術能力的重要性，期間除陸陸續續的自我學習之外，也進入職訓局開設的專班修習<img style=\"float: right; margin: 0 15px;\" src=\"img/logo/html5.png\" alt=\"\" width=\"162\" height=\"59\">更專業且全面的相關技術 包括<strong>HTML5、CSS3、PHP、Javascript、JQuery、Ajax、Mysql</strong>等前、後端程式能力，同時也能結合本身所學，提供更廣泛的服務。</p>\r\n<p><strong>【我與家人】</strong> 父親為職業軍人退休,母親為家管,我排行第二,有一位兄長與一位妹妹,兄長任職於中央圖書館,妹妹從事汽車零件貿易業,妻子為專業保母,有一男一女 2 個念高中的小孩,平時彼此間皆能互相扶持與體諒,家人相處融洽。&nbsp;</p>\r\n<p><strong>【我與工作】</strong> 透過早年在東方廣告、聯線廣告的廣告美術設計及媒體操作工作經驗,從廣告中接觸到許多電腦動畫及特效,加上大學所學,便立志進入相關產業,歷經在大眾電腦從事動畫軟體教學、系統整合安裝及銷售支援經驗,隨後進入電視台從事專業影片製作,再到進入宏廣卡通動畫公司負責製作技術統籌及人員教育訓練及生產線規劃等,期間曾負責台北、大陸、泰國三地之 技術相關業務及負責美國迪士尼、華納、環球、MGM 米高梅、nickelodeon、Stretch Film、丹麥 A-Film 等公司之往來技術研發及配合業務以及國內的故宮 e-learning 學習網製 作案、教育部六大學習網之自然生態網規畫製作等大型專案,一路走來皆與同事相處融洽並 多得貴人相助,得以累積豐富經驗及能力,也希望能在往後的職場生涯中繼續貢獻所長。</p>\r\n</div>', 1);
 
 -- --------------------------------------------------------
 
@@ -126,14 +126,14 @@ CREATE TABLE `gallery` (
 --
 
 INSERT INTO `gallery` (`id`, `file`, `title`, `text`, `embed`, `link`, `type`, `sh`) VALUES
-(10, 'picowork.jpg', 'Picowork 雲端作業系統形象影片', '全程參與整個專案從市場定位、系統功能發想到最後建置完成，共歷時3年。其中包括UX/UI、logo、icon、介面音效、intro影片及使用教學影片等皆包辦參與企劃及製作。', '', 'https://www.facebook.com/PicoworkCloud/', 'video', 1),
-(11, 'wifiboy.jpg', 'Wifiboy 學習板介紹影片', '國人自製，超越micro bit的開發學習板，參與了產品測試及Demo影片製作', '', 'https://wifiboy.org/', 'video', 1),
+(10, 'picowork.jpg', 'Picowork 雲端作業系統形象影片', '全程參與整個專案從市場定位、系統功能發想到最後建置完成，共歷時3年。其中包括UX/UI、logo、icon、介面音效、intro影片及使用教學影片等皆包辦參與企劃及製作。', '<iframe width=640  height=360 src=https://www.youtube.com/embed/hw7ThQ3Tfew frameborder=0  allow=accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe>', 'https://www.facebook.com/PicoworkCloud/', 'video', 1),
+(11, 'wifiboy.jpg', 'Wifiboy 學習板介紹影片', '國人自製，超越micro bit的開發學習板，參與了產品測試及Demo影片製作', '<iframe width=640 height=320 src=https://www.youtube.com/embed/Gs_0jFjpV80 frameborder=0 allow=accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe>', 'https://wifiboy.org/', 'video', 1),
 (12, 'heroes1.jpg', '真正的英雄:動畫影片', '客戶: White Knight\r\n\r\n長度: 2D Feature Film – 20 min\r\n<br>\r\n得獎紀錄: 本片榮獲墨西哥2011年度最佳動畫影片大獎<br>(Best Animated Picture” award in Mexico)', '', 'http://www.88studio.com.tw/?p=463', 'video', 1),
-(18, '11.jpg', 'Tarzan', 'Disney', NULL, '', 'cartoon', 1),
-(19, '61nSaZr8lyL._SY445_.jpg', 'Little Mermaid', 'Disney', NULL, '', 'cartoon', 1),
-(20, '2.jpg', 'Balto series', 'Universal', NULL, '', 'cartoon', 1),
-(21, '12.jpg', 'Tom Sawyer', 'MGM', NULL, '', 'cartoon', 1),
-(22, '4.jpg', 'Curious George', 'Universal', NULL, '', 'cartoon', 1),
+(18, '11.jpg', 'Tarzan', 'Disney', '', '', 'cartoon', 1),
+(19, '61nSaZr8lyL._SY445_.jpg', 'Little Mermaid', 'Disney', '', '', 'cartoon', 1),
+(20, '2.jpg', 'Balto series', 'Universal', '', '', 'cartoon', 1),
+(21, '12.jpg', 'Tom Sawyer', 'MGM', '', '', 'cartoon', 1),
+(22, '4.jpg', 'Curious George', 'Universal', '', '', 'cartoon', 1),
 (23, '1.jpg', 'Princess series', 'Disney', NULL, '', 'cartoon', 1),
 (24, '8.jpg', 'Courage the Cowardly Dog', 'Stretch Film', NULL, '', 'cartoon', 1),
 (25, '9.jpg', 'Land Before Time series', 'Universal', NULL, '', 'cartoon', 1),
