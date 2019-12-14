@@ -45,17 +45,34 @@ include_once "./base.php";
         $start=($p-1)*$div;
         // 下SQL查詢語法(LIMIT start,amount) 及 取出分頁資料
         $rows=all($useTable,['type'=>$type]," LIMIT $start,$div");
+/*         $test=print_r($rows[0][4]); */
+        //echo $test;
 
         //取出資料表的所有資料
 /*         $rows=all($useTable,['type'=>$type]);  */
 
         //以迴圈的方式逐筆列出資料
         foreach($rows as $r){
+
         ?>
+
           <div class="row video fadeInUp wow px-0 my-2 mx-0" style="padding:0px 1px;border-radius:8px;background:rgb(170, 170, 170);overflow:hidden">
-              <!-- 圖片區 -->            
-              <div class="col-12 col-md-5 my-0 p-0" >
-                  <img src="./img/<?=$r['file'];?>" class="w-100 h-100 object-fit">
+              <!-- 圖片區 -->   
+              <?php
+              if($r['type']=='video' && !empty($r['embed'])){
+              ?>  
+                <div class="col-12 col-md-5 my-0 p-0"  onclick="fp('#cover','#cvr','<?=$r['embed'];?>')" >
+                
+              <?php
+              }else{
+              ?>  
+
+                <div class="col-12 col-md-5 my-0 p-0"  onclick="fp('#cover','#cvr','<img src=./img/<?=$r['file'];?> >')" >
+
+              <?php
+              } 
+              ?>  
+                  <img src="./img/<?=$r['file'];?>" class="w-100 h-100 object-fit"><!-- </a> -->
               </div>
               <!-- 文字區 -->
               <div class="col-12 col-md-7 mt-3 text-white align-self-center">

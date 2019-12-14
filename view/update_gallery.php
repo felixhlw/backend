@@ -39,7 +39,8 @@ if(!empty($_GET['type']) && $_GET['type']=='video'){
 ?>
 <hr>
 <br>
-<h3 class="cent">更新<?=$id.$type;?>播放連結</h3>
+<!-- <h3 class="cent">更新<?=$id.$type;?>播放連結</h3> -->
+<h3 class="cent">更新<?=$type;?>播放連結</h3>
 <form action="./api/edit.php" method="post" enctype="multipart/form-data" style="width:60%;margin:auto;margin-top:10px">
 <table class="just3">
     <tr >
@@ -50,7 +51,7 @@ if(!empty($_GET['type']) && $_GET['type']=='video'){
                 <input type="hidden" name="type" value="<?=$_GET['type'];?>">
                 <input type="hidden" name="p" value="<?=$p;?>">
                 <textarea name="embed" id="embed" cols="30" rows="10" style="width: 100%;text-align:left"><?=$embed['embed'];?></textarea>
-                <!--這裹使用素材提供的op()函式來載入新增資料需要的表單檔案，
+                <!--這裹使用素材提供的op函式來載入新增資料需要的表單檔案，
                 同時利用get機制帶入相關的資料表名稱等資訊-->
             </td>
         </tr>

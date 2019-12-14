@@ -17,6 +17,14 @@ function lo(x)
 {
 	location.replace(x)
 }
+function fp(x,y,z)
+{
+	$(x).fadeIn()
+	if(y)
+	$(y).fadeIn()
+	if(y&&z)
+	$(y).html(z)
+}
 function op(x,y,url)
 {
 	$(x).fadeIn()
@@ -25,6 +33,9 @@ function op(x,y,url)
 	if(y&&url)
 	$(y).load(url)
 }
+
+	
+
 function cl(x)
 {
 	$(x).fadeOut();
