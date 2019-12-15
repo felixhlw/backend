@@ -28,7 +28,7 @@ include_once "./base.php";
 </div>
 
 
-<div class="show my-2">
+<div class="show mt-3">
   <!-- <p class="t cent botli">作品集<?=$type;?></p> -->
  
         <?php
@@ -61,13 +61,13 @@ include_once "./base.php";
               <?php
               if($r['type']=='video' && !empty($r['embed'])){
               ?>  
-                <div class="col-12 col-md-5 my-0 p-0"  onclick="fp('#cover','#cvr','<?=$r['embed'];?>')" >
+                <div class="col-12 col-md-5  p-0 vshow"  onclick="fp('#cover','#cvr','<?=$r['embed'];?>')" >
                 
               <?php
               }else{
               ?>  
 
-                <div class="col-12 col-md-5 my-0 p-0"  onclick="fp('#cover','#cvr','<img src=./img/<?=$r['file'];?> >')" >
+                <div class="col-12 col-md-5  p-0 gshow"  onclick="fp('#cover2','#cvr2','<img src=./img/<?=$r['file'];?> class=gshow align-self-center>')" >
 
               <?php
               } 

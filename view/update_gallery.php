@@ -31,11 +31,12 @@ if (!empty($_GET['type'])){
     </tr>
 </table>
 </form>
+
+
+<!-- 判斷是否為video，以顯示增加embed的欄位 -->
 <?php
 if(!empty($_GET['type']) && $_GET['type']=='video'){
     $embed=find($table,['id'=>$id]);
-    
-        
 ?>
 <hr>
 <br>

@@ -5,6 +5,7 @@ include_once "../base.php";
 $table=$_POST['table'];
 $type=$_POST['type'];
 $embed=$_POST['embed'];
+$layout=$_POST['layout'];
 $p=$_POST['p'];
 
 //利用迴圈來判斷資料要刪除還是更新內容
@@ -40,7 +41,6 @@ if(is_array($_POST['id'])){
                     //將欄位內容更新成表單傳遞過來的內容
                     $data['title']=$_POST['title'][$key];
                     $data['text']=$_POST['text'][$key];
-
                     $data['link']=$_POST['link'][$key];
                     $data['sh']=(in_array($id,$_POST['sh']))?1:0;
                 break;
@@ -64,6 +64,11 @@ if(is_array($_POST['id'])){
             save($table,$data);
         }
     }
+}elseif(!empty($_POST['layout'])){
+    $id=$_POST['id'];
+    $data=find($table,$id);
+    $data['layout']=$_POST['layout'];
+    save($table,$data);
 }else{
     $id=$_POST['id'];
     $data=find($table,$id);
