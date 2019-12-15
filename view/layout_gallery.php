@@ -18,12 +18,17 @@ if (!empty($_GET['type'])){
     <tr >
         <td >橫幅寬版 ：</td>
         <td></td>
-        <td><input type="radio" name="layout" id="layout" style="width:15px;height:15px" value="0" <?=($layout['layout']==0)?"checked":"";?>> </td>
+        <td><input type="radio" name="layout" id="layout" style="width:15px;height:15px" value="1" <?=($layout['layout']==0||$layout['layout']==1)?"checked":"";?>> </td>
     </tr>
     <tr >
         <td >直式版型 ：</td>
         <td></td>
-        <td><input type="radio" name="layout" id="layout" style="width:15px;height:15px" value="1" <?=($layout['layout']==1)?"checked":"";?> > </td>
+        <td><input type="radio" name="layout" id="layout" style="width:15px;height:15px" value="2" <?=($layout['layout']==2)?"checked":"";?> > </td>
+    </tr>
+    <tr >
+        <td >測試版型 ：</td>
+        <td></td>
+        <td><input type="radio" name="layout" id="layout" style="width:15px;height:15px" value="3" <?=($layout['layout']==3)?"checked":"";?> > </td>
     </tr>
     <tr >
         <td colspan="2">

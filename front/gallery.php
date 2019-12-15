@@ -55,7 +55,7 @@ include_once "./base.php";
         foreach($rows as $r){
 
         ?>
-
+          <!-- layout1 (橫幅寬版) begin -->
           <div class="row video fadeInUp wow px-0 my-2 mx-0" style="padding:0px 1px;border-radius:8px;background:rgb(170, 170, 170);overflow:hidden">
               <!-- 圖片區 -->   
               <?php
@@ -87,7 +87,7 @@ include_once "./base.php";
                     <a href="<?=$r['link'];?>"><i class="fas" style="color: rgb(255, 255, 255);"></i> 相關網站連結 </a> 
                   </p>
               </div>
-          </div>  
+          </div>   <!-- layout1 (橫幅寬版) end -->
 
         <?php
         }

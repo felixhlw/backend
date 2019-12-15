@@ -64,15 +64,15 @@ if(is_array($_POST['id'])){
             save($table,$data);
         }
     }
-}elseif(!empty($_POST['layout'])){
+}elseif(!empty($_POST['embed'])){
     $id=$_POST['id'];
     $data=find($table,$id);
-    $data['layout']=$_POST['layout'];
+    $data['embed']=$_POST['embed'];
     save($table,$data);
 }else{
     $id=$_POST['id'];
     $data=find($table,$id);
-    $data['embed']=$_POST['embed'];
+    $data['layout']=$_POST['layout'];
     save($table,$data);
 }
 

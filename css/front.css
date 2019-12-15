@@ -50,11 +50,12 @@ body {
 /* 	padding: 32px; */
     min-width:300px;
     max-width:800px;
-	width:80%; 
-	height:60%; 
+	width:100vw; 
+	height:320px; 
     margin:auto; 
     text-align: center;
-    line-height: 350px;
+/*     line-height: 350px; */
+/*     background:#fa3333; */
 /* 	border-radius: 15px; */
 }
 
