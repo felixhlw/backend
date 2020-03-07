@@ -37,7 +37,7 @@ if (!empty($_GET['type'])){
             <input type="hidden" name="type" value="<?=$_GET['type'];?>">
             <input type="hidden" name="p" value="<?=$p;?>">
             <input type="reset" value="重置">
-            <input type="submit" value="設定">
+            <input type="submit" value="送出">
         </td>
     </tr>
 </table>

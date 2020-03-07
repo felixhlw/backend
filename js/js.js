@@ -40,3 +40,4 @@ function cl(x)
 {
 	$(x).fadeOut();
 }
+

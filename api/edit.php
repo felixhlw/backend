@@ -2,11 +2,15 @@
 include_once "../base.php";
 
 //取得要編輯資料的資料表名稱
-$table=$_POST['table'];
-$type=$_POST['type'];
-$embed=$_POST['embed'];
-$layout=$_POST['layout'];
-$p=$_POST['p'];
+if (!empty($_POST['type'])) {
+    $table=$_POST['table'];
+    $type=$_POST['type'];
+    /*     $embed=$_POST['embed'];
+    $layout=$_POST['layout'];
+    $p=$_POST['p']; */
+}else{
+    $table=$_POST['table'];
+}
 
 //利用迴圈來判斷資料要刪除還是更新內容
 
@@ -84,7 +88,12 @@ if(!empty($type)){
     to("../admin.php?do=$table&type=$type&p=$p"); 
 
 }else{
-    to("../admin.php?do=$table");
-}
-
-?>
+    /* to("../admin.php?do=$table");  */
+     ?>
+    <script>
+        location.href="../admin.php?do=<?=$table;?>"
+    </script>
+   <?php 
+} 
+/* }
+?> */

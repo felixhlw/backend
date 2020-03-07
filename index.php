@@ -51,6 +51,17 @@ include_once "./base.php";
         <div id="cvr" style="z-index:9898;"></div>
         </div>
     </div>
+
+    <div id="cover1" style="display:none; ">
+        <div id="coverr1">
+        <a class="close" style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;"
+            onclick="cl(&#39;#cover1&#39;)">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M17.953 7.453L13.422 12l4.531 4.547-1.406 1.406L12 13.422l-4.547 4.531-1.406-1.406L10.578 12 6.047 7.453l1.406-1.406L12 10.578l4.547-4.531z" fill-rule="evenodd"></path></svg>
+        </a>
+        <div id="cvr1" style="z-index:9898;"></div>
+        </div>
+    </div>
+
     <div id="cover2" style="display:none; ">
         <div id="coverr2">
         <a class="close" style="position:absolute; right:3px; top:4px; cursor:pointer; z-index:9999;"

@@ -16,7 +16,8 @@ include_once "./base.php";
                  // 計算資料的開始筆數((當前頁-1)*每頁筆數)
                  $start=($p-1)*$div;
                  // 下SQL查詢語法(LIMIT start,amount) 及 取出分頁資料
-                 $rows=all($useTable,['sh'=>'1']," LIMIT $start,$div");
+                 /* $rows=all($useTable,['sh'=>'1']," LIMIT $start,$div ORDER BY `rank`"); */
+                 $rows=q("select * from $useTable where sh=1 ORDER BY rank LIMIT $start,$div");
          //取出資料表的所有資料
          /* $rows=all($useTable); */
  
