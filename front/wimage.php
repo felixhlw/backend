@@ -11,7 +11,7 @@
               }else{
               ?>  
 
-                <div class="col-12 col-md-5 p-0 wishow"  onclick="fp('#cover1','#cvr1','<img src=./img/<?=$r['file'];?> class=wishow align-self-center>')" >
+                <div class="col-12 col-md-5 p-0 wishow"  onclick="fp('#cover1','#cvr1','<a href=<?=(!empty($r['link']))?$r['link']:'#';?> target=_blank><img src=./img/<?=$r['file'];?> class=wishow align-self-center></a>')" >
 
               <?php
               } 
