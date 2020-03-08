@@ -21,10 +21,10 @@ body {
 #coverr
 {
 	width:70%;
-	min-width:300px;
-	max-width:800px;
-	height:55%;
-	min-height:300px;
+	min-width:500px;
+	max-width:900px;
+	height:60%;
+	max-height:60vh;
 	position:absolute;
 	z-index:5;
 	background:#ffffff;
@@ -42,20 +42,25 @@ body {
 }
 
 #cvr{
-/* 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center; */
-/* 	position:absolute;  */
-/* 	padding: 32px; */
+    /* 	display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+    /* 	position:absolute;  */
+    /* 	padding: 32px; */
     min-width:300px;
-    max-width:800px;
-	width:100vw; 
-	height:320px; 
+    /* max-width:580px; */
+    /* max-height:90vh; */
+    max-width:90vw; 
+    max-height:95%; 
     margin:auto; 
     text-align: center;
-/*     line-height: 350px; */
 /*     background:#fa3333; */
+    align-self: center;
+    justify-content: center;
+    align-items: center; 
+    vertical-align: middle;
+/*     line-height: 350px; */
 /* 	border-radius: 15px; */
 }
 
@@ -107,7 +112,7 @@ body {
         max-height:95%; 
         margin:auto; 
         text-align: center;
-        background:#fa3333;
+/*         background:#fa3333; */
         align-self: center;
         justify-content: center;
         align-items: center; 
@@ -131,9 +136,9 @@ body {
 {
 	width:70%;
 	min-width:300px;
-	max-width:650px;
+	max-width:620px;
 	/* height:80vh; */
-	max-height:82vh;
+	max-height:85vh;
 	position:absolute;
 	z-index:5;
 	background:#ffffff;
@@ -158,7 +163,7 @@ body {
 /* 	position:absolute;  */
 /* 	padding: 32px; */
     min-width:300px;
-    max-width:580px;
+    max-width:560px;
     /* max-height:90vh; */
 	width:90vw; 
 	max-height:95%; 
@@ -193,6 +198,7 @@ body {
     margin:auto; 
     text-align: center;
     align-self: center;
+    vertical-align: middle;
     cursor: pointer;
 }
 .wishow{
@@ -210,7 +216,7 @@ body {
 .vishow{
     min-height:100px;
     /* max-width:400px; */
-    max-height:780px; 
+    max-height:750px; 
     /* width:90vw; */ 
 	/* height:80vh;  */
     margin:0 auto; 

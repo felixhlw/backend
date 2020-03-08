@@ -1,5 +1,6 @@
 <!-- layout1 (橫幅寬版) begin -->
-<div class="row video fadeInUp wow px-0 my-2 mx-0" style="padding:0px 1px;border-radius:8px;background:rgb(170, 170, 170);overflow:hidden">
+<!-- <div class="row video fadeInUp wow px-0 my-2 mx-0" style="padding:0px 1px;border-radius:8px;background:rgb(170, 170, 170);overflow:hidden"> -->
+<div class="row video px-0 my-2 mx-0" style="padding:0px 1px;border-radius:8px;background:rgb(170, 170, 170);overflow:hidden">
               <!-- 圖片區 -->   
               <?php
               if($r['type']=='video' && !empty($r['embed'])){
